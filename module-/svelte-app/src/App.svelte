@@ -125,6 +125,7 @@
 	  height: 200px;
 	  border: 2px solid #333;
 	  background-color: lightblue;
+	  font-family: 'Times New Roman', Times, serif;
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
@@ -135,6 +136,7 @@
 	  height: 200px;
 	  border: 2px solid #333;
 	  background-color: lightblue;
+	  font-family: 'Times New Roman', Times, serif;
 	  display: flex;
 	  flex-direction: column;
 	  align-items: left;
