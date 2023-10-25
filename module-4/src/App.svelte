@@ -25,41 +25,6 @@
   </script>
   
   <style>
-	.navbar {
-	  background-color: black;
-	  color: white;
-	  padding: 10px;
-	}
-  
-	.navbar nav {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	}
-  
-	.navbar nav ul {
-	  list-style: none;
-	  padding: 0;
-	  margin: 0;
-	  display: flex;
-	  width: 100%;
-	}
-  
-	.navbar nav li {
-	  flex: 1;
-	  text-align: center;
-	}
-  
-	.navbar nav li a {
-	  text-decoration: none;
-	  color: white;
-	  transition: color 0.3s;
-	}
-  
-	.navbar nav li a:hover {
-	  color: lightgray;
-	}
-  
 	.business-card-container {
 	  display: flex;
 	  justify-content: space-between;
@@ -119,8 +84,8 @@
 	  background-color: #0056b3;
 	}
   
-	.preview-section .business-card-front, .prompt-content .business-card-front
-	 {
+	.preview-section .business-card-front,
+	.prompt-content .business-card-front {
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
@@ -131,7 +96,8 @@
 	  align-items: center;
 	  justify-content: center;
 	}
-	.preview-section .business-card-back, .prompt-content .business-card-back{
+	.preview-section .business-card-back,
+	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
@@ -169,24 +135,11 @@
 	  border-radius: 5px;
 	  text-align: center;
 	}
-  
 	.prompt-content .business-card-front:hover,
 	.prompt-content .business-card-back:hover {
 	  background-color: lightcoral;
 	}
   </style>
-  
-  <div class="navbar">
-	<nav>
-	  <ul>
-		<li><a href="#" on:click={() => changePage("home")}>Home</a></li>
-		<li><a href="#" on:click={() => changePage("about")}>About</a></li>
-		<li><a href="#" on:click={() => changePage("templates")}>Templates</a></li>
-		<li><a href="#" on:click={() => changePage("support")}>Support</a></li>
-		<li><a href="#" on:click={() => changePage("login")}>Login/Signup</a></li>
-	  </ul>
-	</nav>
-  </div>
   
   {#if currentPage === "home"}
   <div class="business-card-container">
@@ -232,24 +185,6 @@
 		<div class="business-card-text">{formData.website}</div>
 	  </div>
 	</div>
-  </div>
-  {/if}
-  
-  {#if currentPage === "about"}
-  <div>
-	<!-- About page content goes here -->
-  </div>
-  {/if}
-  
-  {#if currentPage === "templates"}
-  <div>
-	<!-- Templates page content goes here -->
-  </div>
-  {/if}
-  
-  {#if currentPage === "support"}
-  <div>
-	<!-- Support page content goes here -->
   </div>
   {/if}
   
