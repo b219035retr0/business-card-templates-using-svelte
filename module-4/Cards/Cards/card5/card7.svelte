@@ -1,0 +1,217 @@
+<script>
+
+</script>
+<div class="comp_icon-grid-three-up-parent" id="frontContainer">
+        <img class="icon-grid-three-up" alt="" src="./public/-icon-grid-three-up.svg" />
+
+
+        <b class="company-name">Company Name</b>
+        <div class="tagline">tagline</div>
+    </div>
+<style>
+
+</style>
+
+<!--
+-----------------------------------------
+// filename: YourNameParent.svelte
+// created: 2023-10-26
+-->
+
+<div class="comp_your-name-parent" id="backContainer">
+        <b class="your-name">Your Name</b>
+        <i class="position">Position</i>
+        <img class="frame-child" alt="" src="./public/rectangle-1.svg" />
+
+
+        <i class="contact">contact</i>
+        <i class="website-url">Website url</i>
+        <i class="email">Email</i>
+        <i class="address">Address</i>
+    </div>
+
+
+<!--
+-----------------------------------------
+// filename: App.svelte
+// created: 2023-10-26
+-->
+<html lang=”en’>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" />
+</head>
+<style>
+    /* global css */
+    body {
+        margin: 0;
+        line-height: normal;
+    }
+
+
+    :root {
+        /* fonts */
+        --font-inter: Inter;
+        /* font sizes */
+        --font-size-3xs: 10px;
+
+
+        /* Colors */
+        --color-white: #fff;
+        --color-darkslategray: rgba(9, 45, 57, 0.89);
+    }
+
+
+    /* front css */
+    .icon-grid-three-up {
+        position: absolute;
+        width: 14.67%;
+        top: 46px;
+        right: 42.67%;
+        left: 42.67%;
+        max-width: 100%;
+        overflow: hidden;
+        height: 42.12px;
+    }
+
+
+    .company-name {
+        position: absolute;
+        top: calc(50% - 5px);
+        left: calc(50% - 73px);
+        display: inline-block;
+        width: 156px;
+        height: 19px;
+    }
+
+
+    .tagline {
+        position: absolute;
+        top: calc(50% + 21px);
+        left: calc(50% - 22px);
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    .icon-grid-three-up-parent {
+        position: relative;
+        border-radius: 12px;
+        background-color: rgba(9, 45, 57, 0.89);
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        text-align: left;
+        font-size: 20px;
+        color: var(--color-white);
+        font-family: var(--font-inter);
+    }
+
+
+    /* back css */
+    .position,
+    .your-name {
+        position: absolute;
+        top: calc(50% - 22px);
+        right: 8px;
+        font-size: 20px;
+        color: var(--color-darkslategray);
+    }
+
+
+    .position {
+        top: calc(50% + 2px);
+        right: 47px;
+        font-size: 12px;
+    }
+
+
+    .frame-child {
+        position: absolute;
+        top: 31px;
+        left: 0;
+        width: 185px;
+        height: 139px;
+    }
+
+
+    .contact {
+        position: absolute;
+        top: calc(50% - 39px);
+        left: 17px;
+    }
+
+
+    .address,
+    .email,
+    .website-url {
+        position: absolute;
+        top: calc(50% + 29px);
+        left: 17px;
+    }
+
+
+    .address,
+    .email {
+        top: calc(50% + 7px);
+    }
+
+
+    .address {
+        top: calc(50% - 15px);
+    }
+
+
+    .your-name-parent {
+        position: relative;
+        border-radius: 12px;
+        background-color: rgba(231, 240, 244, 0.89);
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        text-align: left;
+        font-size: var(--font-size-3xs);
+        color: var(--color-white);
+        font-family: var(--font-inter);
+    }
+</style>
+
+
+<body>
+   
+
+    <script>
+        var frontContainer = document.getElementById("frontContainer");
+        var backContainer = document.getElementById("backContainer");
+
+
+
+        frontContainer.style.display = "block";
+        backContainer.style.display = "none";
+
+
+        if (frontContainer && backContainer) {
+            frontContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "none"; // Hide the frontContainer
+                backContainer.style.display = "block"; // Show the backContainer
+            });
+
+
+            backContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "block"; // Hide the frontContainer
+                backContainer.style.display = "none"; // Show the backContainer
+            });
+
+
+
+        }
+    </script>
+</body>
+
+
+</html>

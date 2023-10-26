@@ -1,0 +1,269 @@
+<script>
+
+</script>
+<div class="comp_business-parent" id="frontContainer">
+        <div class="business">Business</div>
+        <img class="wolf-icon" alt="" src="./public/wolf@2x.png" />
+    </div>
+<style>
+
+</style>
+
+<html lang=”en’>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+
+
+    <style>
+        body {
+            margin: 0;
+            line-height: normal;
+        }
+
+
+        :root {
+            /* fonts */
+            --font-inter: Inter;
+
+
+            /* font sizes */
+            --font-size-3xs: 10px;
+
+
+            /* Colors */
+            --color-black: #000;
+            --color-darkslateblue: #2e224a;
+
+
+            /* Border radiuses */
+            --br-xs: 12px;
+        }
+
+
+    /* front css */
+        .business,
+        .wolf-icon {
+            position: absolute;
+            left: calc(50% - 31px);
+        }
+
+
+        .business {
+            top: calc(50% + 18px);
+            font-weight: 600;
+        }
+
+
+        .wolf-icon {
+            top: calc(50% - 52px);
+            width: 75px;
+            height: 70px;
+            object-fit: cover;
+        }
+
+
+        .business-parent {
+            position: relative;
+            border-radius: 12px;
+            background-color: #2e224a;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            text-align: left;
+            font-size: 18px;
+            color: #000;
+            font-family: var(--font-inter);
+        }
+
+
+        /* back css */
+        .frame-child,
+        .frame-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: var(--br-xs) 0 0 var(--br-xs);
+            background-color: var(--color-darkslateblue);
+            width: 31px;
+            height: 200px;
+        }
+
+
+        .frame-item {
+            left: 189px;
+            border-radius: 0 var(--br-xs) var(--br-xs) 0;
+            width: 111px;
+        }
+
+
+        .business1,
+        .your-name {
+            position: absolute;
+            font-weight: 600;
+        }
+
+
+        .your-name {
+            top: calc(50% - 70px);
+            left: 47px;
+            font-size: 20px;
+        }
+
+
+        .business1 {
+            top: 106px;
+            right: 16px;
+            font-size: 18px;
+        }
+
+
+        .profession {
+            position: absolute;
+            top: calc(50% - 46px);
+            left: 47px;
+            font-size: 12px;
+        }
+
+
+        .contact {
+            position: absolute;
+            top: 101px;
+            left: calc(50% - 112px);
+        }
+
+
+        .address,
+        .email,
+        .url {
+            position: absolute;
+            top: calc(50% + 62px);
+            left: 38px;
+        }
+
+
+        .address,
+        .email {
+            top: calc(50% + 41px);
+        }
+
+
+        .address {
+            top: calc(50% + 21px);
+        }
+
+
+        .address-icon,
+        .circled-envelope-icon,
+        .phone-icon,
+        .website-icon {
+            position: absolute;
+            top: 158px;
+            left: 8px;
+            width: 18px;
+            height: 18px;
+            object-fit: cover;
+        }
+
+
+        .address-icon,
+        .circled-envelope-icon,
+        .phone-icon {
+            top: 96px;
+        }
+
+
+        .address-icon,
+        .circled-envelope-icon {
+            top: 119px;
+        }
+
+
+        .circled-envelope-icon {
+            top: 140px;
+        }
+
+
+        .wolf-icon1 {
+            position: absolute;
+            top: 36px;
+            right: 18px;
+            width: 75px;
+            height: 70px;
+            object-fit: cover;
+        }
+
+
+        .rectangle-parent {
+            position: relative;
+            border-radius: var(--br-xs);
+            background-color: snow;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            text-align: left;
+            font-size: var(--font-size-3xs);
+            color: var(--color-black);
+            font-family: var(--font-inter);
+        }
+    </style>
+</head>
+
+
+<body>
+   
+    <div class="rectangle-parent" id="backContainer">
+        <div class="frame-child"></div>
+        <div class="frame-item"></div>
+        <div class="your-name">Your Name</div>
+        <div class="business1">Business</div>
+        <i class="profession">Profession</i>
+        <div class="contact">Contact</div>
+        <div class="url">Url</div>
+        <div class="email">Email</div>
+        <div class="address">Address</div>
+        <img class="website-icon" alt="" src="./public/website@2x.png" />
+    
+        <img class="phone-icon" alt="" src="./public/phone@2x.png" />
+    
+        <img class="address-icon" alt="" src="./public/address@2x.png" />
+    
+        <img class="circled-envelope-icon" alt="" src="./public/circled-envelope@2x.png" />
+    
+        <img class="wolf-icon1" alt="" src="./public/wolf@2x.png" />
+      </div>
+    <script>
+        var frontContainer = document.getElementById("frontContainer");
+        var backContainer = document.getElementById("backContainer");
+
+
+
+        frontContainer.style.display = "block";
+        backContainer.style.display = "none";
+
+
+        if (frontContainer && backContainer) {
+            frontContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "none"; // Hide the frontContainer
+                backContainer.style.display = "block"; // Show the backContainer
+            });
+
+
+            backContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "block"; // Hide the frontContainer
+                backContainer.style.display = "none"; // Show the backContainer
+            });
+
+
+
+        }
+    </script>
+</body>
+
+
+</html>

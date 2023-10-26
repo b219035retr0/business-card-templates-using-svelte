@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+
+    <style>
+        body {
+            margin: 0;
+            line-height: normal;
+        }
+
+        :root {
+            /* fonts */
+            --font-inter: Inter;
+
+            /* font sizes */
+            --font-size-3xs: 10px;
+
+            /* Colors */
+            --color-black: #000;
+        }
+
+        /* front css */
+
+        .bookmark-icon {
+            position: absolute;
+            top: 44px;
+            left: calc(50% - 42px);
+            width: 83px;
+            height: 72px;
+            object-fit: cover;
+        }
+
+        .your-company {
+            position: absolute;
+            bottom: 62px;
+            left: calc(50% - 58px);
+        }
+
+        .front18 {
+            position: relative;
+            background-color: #b4b16f;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            text-align: left;
+            font-size: 18px;
+            color: #000;
+            font-family: var(--font-inter);
+        }
+
+
+        /* back css */
+        .back18-child {
+            position: absolute;
+            top: calc(50% - 100px);
+            left: 0;
+            width: 149px;
+            height: 200px;
+        }
+
+        .your-company1 {
+            position: absolute;
+            top: calc(50% - 0px);
+            left: 12px;
+            font-size: 18px;
+        }
+
+        .your-name {
+            position: absolute;
+            top: 45px;
+            right: 22px;
+            font-size: 16px;
+        }
+
+        .position,
+        .tagline {
+            position: absolute;
+            display: inline-block;
+            width: 74px;
+            height: 18px;
+        }
+
+        .tagline1 {
+            top: calc(50% + 26px);
+            left: 52px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .position {
+            top: 64px;
+            right: 56px;
+        }
+
+        .address {
+            position: absolute;
+            right: 100px;
+            bottom: 65px;
+        }
+
+        .contact-no,
+        .website-url {
+            position: absolute;
+            right: 87px;
+            bottom: 50px;
+        }
+
+        .contact-no {
+            right: 89px;
+            bottom: 35px;
+        }
+
+        .bookmark-icon1 {
+            position: absolute;
+            top: 37px;
+            left: 27px;
+            width: 83px;
+            height: 72px;
+            object-fit: cover;
+        }
+
+        .back18{
+            position: relative;
+            background-color: #b4b16f;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            text-align: left;
+            font-size: var(--font-size-3xs);
+            color: var(--color-black);
+            font-family: var(--font-inter);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="front18" id="frontContainer">
+        <img class="bookmark-icon" alt="" src="./public/bookmark@2x.png" />
+
+        <b class="your-company">Your company</b>
+    </div>
+
+    <div class="back18" id="backContainer">
+        <img class="back18-child" alt="" src="./public/rectangle-1.svg" />
+
+        <b class="your-company1">Your company</b>
+        <b class="your-name">Your Name</b>
+        <div class="tagline1">Tagline</div>
+        <i class="position">Position</i>
+        <div class="address">Address</div>
+        <div class="website-url">website url</div>
+        <div class="contact-no">contact no</div>
+        <img class="bookmark-icon1" alt="" src="./public/bookmark@2x.png" />
+
+    </div>
+
+    <script>
+        var frontContainer = document.getElementById("frontContainer");
+        var backContainer = document.getElementById("backContainer");
+
+
+        frontContainer.style.display = "block";
+        backContainer.style.display = "none";
+
+        if (frontContainer && backContainer) {
+            frontContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "none"; // Hide the frontContainer
+                backContainer.style.display = "block"; // Show the backContainer
+            });
+
+            backContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "block"; // Hide the frontContainer
+                backContainer.style.display = "none"; // Show the backContainer
+            });
+
+
+        }
+    </script>
+</body>
+
+</html>

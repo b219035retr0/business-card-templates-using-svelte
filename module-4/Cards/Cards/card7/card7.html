@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Castoro">
+  <style>
+    body {
+      margin: 0;
+      line-height: normal;
+    }
+
+    :root {
+      /* fonts */
+      --font-anton: Anton;
+      --font-archivo: Archivo;
+      --font-castoro: Castoro;
+
+      /* font sizes */
+      --font-size-mini-3: 14.3px;
+      --font-size-3xs-3: 9.3px;
+
+      /* Colors */
+      --color-darkslategray-100: #354f52;
+      --color-darkslategray-200: #283d2a;
+      --color-white: #fff;
+
+      /* Border radiuses */
+      --br-3xs: 10px;
+    }
+
+    /* FRONT DESIGN CSS*/
+
+    .icons8-agriculture-96-1 {
+      position: absolute;
+      top: calc(50% - 50.67px);
+      left: calc(50% - 24.3px);
+      width: 66.67px;
+      height: 66.67px;
+      overflow: hidden;
+    }
+
+    .group-icon {
+      position: absolute;
+      height: 37.62%;
+      width: 19.27%;
+      top: 11.39%;
+      right: 35.74%;
+      bottom: 50.99%;
+      left: 44.99%;
+      max-width: 100%;
+      overflow: hidden;
+      max-height: 100%;
+    }
+
+    .front7-child {
+      position: absolute;
+      top: calc(50% - 100.59px);
+      left: calc(50% - 150.89px);
+      width: 94.12px;
+      height: 200.27px;
+      cursor: pointer;
+    }
+
+    .business {
+      top: calc(50% + 3px);
+      left: calc(50% - 58.59px);
+      font-size: 27px;
+      font-weight: 900;
+      color: #d9d9d9;
+      width: 140px;
+      height: 23px;
+      text-shadow: 3.3333330154418945px 3.3333330154418945px 1.33px rgba(0, 0, 0, 0.25);
+    }
+
+    .business,
+    .tag-line,
+    .wwwwebsitecom {
+      position: absolute;
+      display: inline-block;
+    }
+
+    .tag-line {
+      top: calc(50% + 32px);
+      left: calc(50% + 24.41px);
+      font-weight: 300;
+      width: 86.67px;
+      height: 12.33px;
+      text-shadow: 3.3333330154418945px 3.3333330154418945px 1.33px rgba(0, 0, 0, 0.25);
+    }
+
+    .wwwwebsitecom {
+      top: calc(50% + 76px);
+      left: calc(50% - 49.59px);
+      font-family: var(--font-anton);
+      width: 153.33px;
+      height: 18px;
+      text-shadow: 3.3333330154418945px 3.3333330154418945px 1.33px rgba(5, 5, 5, 0.25);
+    }
+
+    .front-inner,
+    .front-item {
+      position: absolute;
+      top: calc(50% - 100.5px);
+      left: calc(50% + 94.39px);
+      width: 55.11px;
+      height: 201px;
+    }
+
+    .front7-inner {
+      top: calc(50% - 101px);
+      left: calc(50% - 100.98px);
+      width: 70.37px;
+      height: 201.32px;
+    }
+
+    .front7 {
+      position: relative;
+      border-radius: var(--br-3xs);
+      background-color: var(--color-darkslategray-200);
+      box-shadow: 0 0 0#626262;
+      border: 1px solid var(--color-darkslategray-200);
+      box-sizing: border-box;
+      width: 300px;
+      height: 200px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14.33px;
+      color: var(--color-white);
+      font-family: var(--font-archivo);
+      margin-left: 100px;
+    }
+
+
+    /* BACK DESIGN CSS*/
+
+    .back7-child,
+    .back7-item {
+      position: absolute;
+      top: calc(50% - 100px);
+      height: 200px;
+    }
+
+    .back7-child {
+      left: calc(50% - 150px);
+      border-radius: var(--br-3xs) 0 0 var(--br-3xs);
+      background-color: #259f3b;
+      width: 27px;
+    }
+
+    .back7-item {
+      left: calc(50% - 16px);
+      width: 136px;
+    }
+
+    .icons8-agriculture-96-11 {
+      position: absolute;
+      top: calc(50% - 66px);
+      left: calc(50% + 50px);
+      width: 53px;
+      height: 60px;
+      overflow: hidden;
+    }
+
+    .envelope-icon,
+    .globe-icon,
+    .phone-icon {
+      position: absolute;
+      top: calc(50% + 76.37px);
+      left: calc(50% - 143.69px);
+      width: 15.29px;
+      height: 16.56px;
+    }
+
+    .envelope-icon,
+    .phone-icon {
+      top: calc(50% + 51.19px);
+    }
+
+    .phone-icon {
+      top: calc(50% + 28px);
+      left: calc(50% - 144px);
+    }
+
+    .business1 {
+      top: calc(50% - 3px);
+      left: calc(50% + 19px);
+      font-size: 22px;
+      font-weight: bolder;
+      color: var(--color-darkslategray-100);
+      width: 101.5px;
+      height: 17.96px;
+    }
+
+    .business1,
+    .tag-line1,
+    .your-name {
+      position: absolute;
+      display: inline-block;
+    }
+
+    .your-name {
+      top: calc(50% - 61px);
+      left: calc(50% - 118px);
+      font-size: 18px;
+      font-weight: 900;
+      color: #fbfbfb;
+      width: 123px;
+      height: 18px;
+    }
+
+    .tag-line1 {
+      top: calc(52% + 18.03px);
+      left: calc(43% + 78.31px);
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--color-darkslategray-100);
+      width: 67.66px;
+      height: 9.63px;
+    }
+
+    .emailgmailcom,
+    .wwwwebsitecom1,
+    .xxxxx-xxxxx {
+      position: absolute;
+      top: calc(50% + 32px);
+      left: calc(50% - 110px);
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      width: 100px;
+      height: 11px;
+    }
+
+    .emailgmailcom,
+    .wwwwebsitecom1 {
+      top: calc(50% + 56px);
+      left: calc(50% - 108px);
+    }
+
+    .wwwwebsitecom1 {
+      top: calc(50% + 78px);
+    }
+
+    .icons8-agriculture-96-2 {
+      position: absolute;
+      top: calc(50% - 52.76px);
+      left: calc(50% - 148.37px);
+      width: 23.42px;
+      height: 23.42px;
+      overflow: hidden;
+    }
+
+    .your-domain {
+      position: absolute;
+      top: calc(50% - 37px);
+      left: calc(50% - 110px);
+      font-size: 13.75px;
+      letter-spacing: 0.04em;
+      font-family: var(--font-castoro);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140.27px;
+      height: 10.41px;
+      text-shadow: 1.301223635673523px 1.301223635673523px 1.04px rgba(0, 0, 0, 0.25);
+      -webkit-text-stroke: 0.3px #fff;
+    }
+
+    .back7 {
+      position: relative;
+      border-radius: var(--br-3xs);
+      background: linear-gradient(#283d2a, #283d2a), #fff;
+      box-shadow: 0 0 0#636363;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      cursor: pointer;
+      text-align: left;
+      font-size: 9.33px;
+      color: var(--color-white);
+      font-family: var(--font-archivo);
+      margin-left: 100px;
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- FRONT CODE -->
+
+  <div class="front7" id="fRONTContainer">
+    <div class="icons8-agriculture-96-1"></div>
+    <img class="group-icon" alt="" src="./public/group.svg" />
+
+    <img class="front7-child" alt="" src="./public/rectangle-7.svg" id="rectangle" />
+
+
+    <div class="business">Business</div>
+    <div class="tag-line">Tag Line</div>
+    <div class="wwwwebsitecom">www.website.com</div>
+    <img class="front7-item" alt="" src="./public/vector-2.svg" />
+
+    <img class="front7-inner" alt="" src="./public/vector-3.svg" />
+  </div>
+
+
+  <!-- BACK CODE -->
+
+  <div class="back7" id="bACKContainer">
+    <div class="back7-child"></div>
+    <img class="back7-item" alt="" src="./public/rectangle-5.svg" />
+
+    <img class="back7-item" alt="" src="./public/rectangle-6.svg" />
+
+    <img class="back7-item" alt="" src="./public/rectangle-71.svg" />
+
+    <img class="icons8-agriculture-96-11" alt="" src="./public/icons8agriculture96-1.svg" />
+
+    <img class="globe-icon" alt="" src="./public/globe.svg" />
+
+    <img class="envelope-icon" alt="" src="./public/envelope.svg" />
+
+    <img class="phone-icon" alt="" src="./public/phone.svg" />
+
+    <div class="business1">Business</div>
+    <div class="your-name">YOUR NAME</div>
+    <div class="tag-line1">Tag Line</div>
+    <div class="xxxxx-xxxxx">+91 XXXXX XXXXX</div>
+    <div class="emailgmailcom">email@gmail.com</div>
+    <div class="wwwwebsitecom1">www.website.com</div>
+    <img class="icons8-agriculture-96-2" alt="" src="./public/icons8agriculture96-2.svg" />
+
+    <div class="your-domain">Your Domain</div>
+  </div>
+
+
+
+  <script>
+    const frontCard = document.getElementById("fRONTContainer");
+    const backCard = document.getElementById("bACKContainer");
+    frontCard.addEventListener("click", () => {
+      frontCard.style.display = "none";
+      backCard.style.display = "block";
+    });
+
+    backCard.addEventListener("click", () => {
+      backCard.style.display = "none";
+      frontCard.style.display = "block";
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+
+<script>
+
+</script>
+<div class="comp_front3" id="frontContainer">
+    <img class="icon5" alt="" src="./public/9-3@2x.png" />
+
+
+    <img class="icon6" alt="" src="./public/4-4@2x.png" />
+
+
+    <div class="fauget-catering1">
+      <p class="fauget1">Fauget</p>
+      <p class="fauget1">Catering</p>
+    </div>
+  </div>
+<style>
+
+</style>
+
+
+<html lang=”en’>
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <style>
+    body {
+      margin: 0;
+      line-height: normal;
+      width: 300px;
+    }
+
+
+    :root {
+      /* fonts */
+      --font-dm-serif-display: "DM Serif Display";
+      --font-playfair-display: "Playfair Display";
+
+
+      /* font sizes */
+      --font-size-5xs-4: 7.4px;
+      --font-size-6xl-7: 25.7px;
+
+
+      /* Colors */
+      --color-white: #fff;
+
+
+      /* Gaps */
+      --gap-mini: 15px;
+    }
+
+
+    .icon5,
+    .icon6 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 147px;
+      height: 134px;
+      object-fit: cover;
+    }
+
+
+    .icon6 {
+      top: 8px;
+      left: 171px;
+      width: 85.74px;
+      height: 59.34px;
+    }
+
+
+    .fauget1 {
+      margin: 0;
+    }
+
+
+    .fauget-catering1 {
+      position: absolute;
+      top: 76px;
+      left: 129px;
+      font-weight: 600;
+      display: inline-block;
+      width: 170.57px;
+      height: 68.57px;
+    }
+
+
+    .front3 {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background-image: url(./public/front@3x.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      cursor: pointer;
+      text-align: center;
+      font-size: 25.74px;
+      color: var(--color-white);
+      font-family: var(--font-playfair-display);
+    }
+
+
+    @media screen and (max-width: 1200px) {
+      .front3 {
+        width: 1050px;
+        height: 600px;
+      }
+    }
+
+
+    /* back css */
+
+
+    .icon {
+      position: relative;
+      width: 136px;
+      height: 135.43px;
+      object-fit: cover;
+      opacity: 0.9;
+      mix-blend-mode: normal;
+    }
+
+
+    .frame,
+    .icon1 {
+      position: absolute;
+    }
+
+
+    .frame {
+      top: 0;
+      left: 0;
+      width: 148px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+
+    .icon1 {
+      top: 10px;
+      left: 84px;
+      width: 51.43px;
+      height: 35.59px;
+      object-fit: cover;
+    }
+
+
+    .fauget {
+      margin: 0;
+    }
+
+
+    .fauget-catering,
+    .frame3 {
+      position: absolute;
+      top: 0;
+      width: 144px;
+      height: 68px;
+    }
+
+
+    .fauget-catering {
+      left: 0;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+
+    .frame3 {
+      right: 0;
+      overflow: hidden;
+      font-size: 25.74px;
+      font-family: var(--font-playfair-display);
+    }
+
+
+    .icon2 {
+      position: relative;
+      width: 22.86px;
+      height: 22.86px;
+      object-fit: cover;
+    }
+
+
+    .nagpurmaharashtraindia {
+      flex: 1;
+      position: relative;
+    }
+
+
+    .frame4,
+    .frame5 {
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--gap-mini);
+    }
+
+
+    .frame4 {
+      position: absolute;
+      top: 158.71px;
+      left: 0;
+      width: 144px;
+    }
+
+
+    .frame5 {
+      top: 123.86px;
+    }
+
+
+    .frame2,
+    .frame5,
+    .frame6 {
+      position: absolute;
+      left: 0;
+      width: 144px;
+    }
+
+
+    .frame6 {
+      top: 89px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--gap-mini);
+    }
+
+
+    .frame2 {
+      top: 0;
+      height: 199px;
+    }
+
+
+    .back3,
+    .frame1,
+    .frame2 {
+      overflow: hidden;
+    }
+
+
+    .frame1 {
+      position: absolute;
+      top: 0;
+      left: 156px;
+      width: 144px;
+      height: 181.57px;
+    }
+
+
+    .back3 {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-image: url(./public/back@3x.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      cursor: pointer;
+      text-align: left;
+      font-size: 7.43px;
+      color: var(--color-white);
+      font-family: var(--font-dm-serif-display);
+    }
+
+
+    @media screen and (max-width: 1200px) {
+      .frame4 {
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+
+
+    @media screen and (max-width: 960px) {
+      .frame4 {
+        width: 300px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap" />
+</head>
+
+
+<body>
+ 
+
+
+  <!-- back -->
+  <div class="back3" id="backContainer">
+    <div class="frame">
+      <img class="icon" alt="" src="./public/8-2@2x.png" />
+    </div>
+    <div class="frame1">
+      <div class="frame2">
+        <div class="frame3">
+          <img class="icon1" alt="" src="./public/4-3@2x.png" />
+
+
+          <div class="fauget-catering">
+            <p class="fauget">Fauget</p>
+            <p class="fauget">Catering</p>
+          </div>
+        </div>
+        <div class="frame4">
+          <img class="icon2" alt="" src="./public/7-1@2x.png" />
+
+
+          <div class="nagpurmaharashtraindia">Nagpur,Maharashtra,India</div>
+        </div>
+        <div class="frame5">
+          <img class="icon2" alt="" src="./public/6-1@2x.png" />
+
+
+          <div class="nagpurmaharashtraindia">20010997@ycce.in</div>
+        </div>
+        <div class="frame6">
+          <img class="icon2" alt="" src="./public/5-1@2x.png" />
+
+
+          <div class="nagpurmaharashtraindia">+91 12345 67890</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var backContainer = document.getElementById("backContainer");
+    if (backContainer) {
+      backContainer.addEventListener("click", function (e) {
+        backContainer.style.display = "none";
+        frontContainer.style.display = "block";
+      });
+    }
+
+
+
+    var frontContainer = document.getElementById("frontContainer");
+    frontContainer.style.display = "none";
+    backContainer.style.display = "block";
+    if (frontContainer) {
+      frontContainer.addEventListener("click", function (e) {
+        frontContainer.style.display = "none";
+        backContainer.style.display = "block";
+      });
+    }
+
+
+    var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+    var observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add("animate");
+            observer.unobserve(targetElement);
+          }
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
+
+
+  </script>
+</body>
+
+
+</html>
