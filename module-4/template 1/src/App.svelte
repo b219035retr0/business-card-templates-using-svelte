@@ -8,7 +8,6 @@
 	};
   
 	let showPrompt = false;
-  
 	let currentPage = "home";
   
 	const changePage = (page) => {
@@ -85,7 +84,9 @@
 	}
   
 	.preview-section .business-card-front,
-	.prompt-content .business-card-front {
+	.prompt-content .business-card-front,
+	.preview-section .business-card-back,
+	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
@@ -96,20 +97,11 @@
 	  align-items: center;
 	  justify-content: center;
 	}
-	.preview-section .business-card-back,
-	.prompt-content .business-card-back {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  background-color: lightblue;
-	  font-family: 'Times New Roman', Times, serif;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: left;
-	  justify-content: center;
-	}
+  
 	.preview-section .business-card-front:hover,
-	.preview-section .business-card-back:hover {
+	.preview-section .business-card-back:hover,
+	.prompt-content .business-card-front:hover,
+	.prompt-content .business-card-back:hover {
 	  background-color: lightcoral;
 	}
   
@@ -134,10 +126,6 @@
 	  padding: 20px;
 	  border-radius: 5px;
 	  text-align: center;
-	}
-	.prompt-content .business-card-front:hover,
-	.prompt-content .business-card-back:hover {
-	  background-color: lightcoral;
 	}
   </style>
   
@@ -197,6 +185,15 @@
 		<div class="business-card-text">{formData.name}</div>
 		<div class="business-card-text">{formData.website}</div>
 	  </div>
+	  <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" download="front.jpeg">
+		<button>Download Front (JPEG)</button>
+	  </a>
+	  <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" download="front.pdf">
+		<button>Download Front (PDF)</button>
+	  </a>
+  
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
 		<div class="business-card-text">{formData.name}</div>
@@ -205,6 +202,14 @@
 		<div class="business-card-text">{formData.phoneNumber}</div>
 		<div class="business-card-text">{formData.website}</div>
 	  </div>
+	  <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" download="back.jpeg">
+		<button>Download Back (JPEG)</button>
+	  </a>
+	  <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" download="back.pdf">
+		<button>Download Back (PDF)</button>
+	  </a>
 	  <button on:click={closePrompt}>Close</button>
 	</div>
   </div>
