@@ -1,7 +1,7 @@
 <script>
 	let formData = {
-	  name: "Name",
-	  designation: "Prof",
+	  name: "Company",
+	  tagline: "One stop solution",
 	  address: "Address",
 	  phoneNumber: "PhoneNumber",
 	  website: "Website",
@@ -27,12 +27,11 @@
   <style>
 	.business-card-container {
 	  display: flex;
-	  justify-content: space-between;
+	  justify-content: space-evenly;
 	}
-  
 	.input-section,
 	.preview-section {
-	  width: 40%;
+	  width: 45%;
 	  padding: 20px;
 	  background-color: #f0f0f0;
 	  border: 1px solid #ccc;
@@ -85,23 +84,16 @@
 	}
   
 	.preview-section .business-card-front,
-	.prompt-content .business-card-front {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	}
+	.prompt-content .business-card-front,
 	.preview-section .business-card-back,
 	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
+    font-family: 'Playfair Display';
 	  display: flex;
 	  flex-direction: column;
-	  align-items: left;
+	  align-items: center;
 	  justify-content: center;
 	}
 	.prompt {
@@ -115,7 +107,6 @@
 	  align-items: center;
 	  background-color: rgba(0, 0, 0, 0.7);
 	}
-  
 	.prompt-content {
 	  background-color: #fff;
 	  padding: 20px;
@@ -123,17 +114,25 @@
 	  text-align: center;
 	}
 
+  :root {
+      /* fonts */
+      --font-playfair-display: "Playfair Display";
+      --font-dm-serif-display: "DM Serif Display";
 
 
+      /* font sizes */
+      --font-size-2xs-3: 10.3px;
+      --font-size-smi: 13px;
+
+
+      /* Colors */
+      --color-white: #fff;
+    }
     /* front css */
-
-
     .frame,
     .icon {
       overflow: hidden;
     }
-
-
     .icon {
       align-self: stretch;
       position: relative;
@@ -418,8 +417,8 @@
 		<input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
 	  </div>
 	  <div class="form-group">
-		<label for="designation">Designation:</label>
-		<input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
+		<label for="tagline">Tagline:</label>
+		<input type="text" id="tagline" bind:value={formData.tagline} placeholder="Your tagline" />
 	  </div>
 	  <div class="form-group">
 		<label for="address">Address:</label>
@@ -443,12 +442,12 @@
 		<div class="business-card-front">
 		  <div class="front17" id="frontContainer">
 			  <section class="frame">
-				<img class="icon" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\a.png" />
+				<img class="icon" alt="" src=".\a.png" />
 			  </section>
 			  <div class="frame1">
 				<div class="frame2">
 				  <div class="frame3">
-					<img class="icon1" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\b.png" />
+					<img class="icon1" alt="" src=".\b.png" />
 				  </div>
 				  <div class="frame4">
 					<div class="fauget-real-estate-container">
@@ -468,11 +467,11 @@
 				<div class="john-leopard-real-estate-agent-parent">
 				  <div class="john-leopard-real-container">
 					<p class="john-leopard">{formData.name}</p>
-					<p class="real-estate-agent">{formData.designation}</p>
+					<p class="real-estate-agent">{formData.tagline}</p>
 				  </div>
-				  <img class="frame-icon" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\a.png" />
+				  <img class="frame-icon" alt="" src=".\a.png" />
 				</div>
-				<img class="icon2" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\left.png" />
+				<img class="icon2" alt="" src=".\left.png" />
 		  
 		  
 				<div class="frame-child"></div>
@@ -482,13 +481,13 @@
 				  <div class="div">{formData.address}</div>
 				</div>
 				<div class="frame7">
-				  <img class="frame-icon1" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\zero.png" />
+				  <img class="frame-icon1" alt="" src=".\zero.png" />
 		  
 		  
-				  <img class="frame-icon2" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\first.png" />
+				  <img class="frame-icon2" alt="" src=".\first.png" />
 		  
 		  
-				  <img class="frame-icon3" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\second.png" />
+				  <img class="frame-icon3" alt="" src=".\second.png" />
 				</div>
 			  </section>
 			</div>
@@ -505,12 +504,12 @@
 		<div class="business-card-front">
 		  <div class="front17" id="frontContainer">
 			  <section class="frame">
-				<img class="icon" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\a.png" />
+				<img class="icon" alt="" src=".\a.png" />
 			  </section>
 			  <div class="frame1">
 				<div class="frame2">
 				  <div class="frame3">
-					<img class="icon1" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\b.png" />
+					<img class="icon1" alt="" src=".\b.png" />
 				  </div>
 				  <div class="frame4">
 					<div class="fauget-real-estate-container">
@@ -530,11 +529,11 @@
 				<div class="john-leopard-real-estate-agent-parent">
 				  <div class="john-leopard-real-container">
 					<p class="john-leopard">{formData.name}</p>
-					<p class="real-estate-agent">{formData.designation}</p>
+					<p class="real-estate-agent">{formData.tagline}</p>
 				  </div>
-				  <img class="frame-icon" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\a.png" />
+				  <img class="frame-icon" alt="" src=".\a.png" />
 				</div>
-				<img class="icon2" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\left.png" />
+				<img class="icon2" alt="" src=".\left.png" />
 		  
 		  
 				<div class="frame-child"></div>
@@ -544,13 +543,13 @@
 				  <div class="div">{formData.address}</div>
 				</div>
 				<div class="frame7">
-				  <img class="frame-icon1" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\zero.png" />
+				  <img class="frame-icon1" alt="" src=".\zero.png" />
 		  
 		  
-				  <img class="frame-icon2" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\first.png" />
+				  <img class="frame-icon2" alt="" src=".\first.png" />
 		  
 		  
-				  <img class="frame-icon3" alt="" src="C:\Users\Sayalee\Downloads\GIt-Hub\svelte-app\module-4\template-card17\public\second.png" />
+				  <img class="frame-icon3" alt="" src=".\second.png" />
 				</div>
 			  </section>
 			</div>
