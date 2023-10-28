@@ -31,7 +31,7 @@
   
 	.input-section,
 	.preview-section {
-	  width: 40%;
+	  width: 45%;
 	  padding: 20px;
 	  background-color: #f0f0f0;
 	  border: 1px solid #ccc;
@@ -88,7 +88,7 @@
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
-	  background-color: lightblue;
+	  background-color: gray;
 	  font-family: 'Playfair Display';
 	  display: flex;
 	  flex-direction: column;
@@ -100,18 +100,13 @@
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
-	  background-color: lightblue;
+	  background-color: gray;
 	  font-family: 'Playfair Display';
 	  display: flex;
 	  flex-direction: column;
 	  align-items: left;
 	  justify-content: center;
 	}
-  
-	.business-card-text {
-	  max-width: 80%;
-	}
-  
 	.prompt {
 	  position: fixed;
 	  top: 0;
@@ -129,10 +124,6 @@
 	  padding: 20px;
 	  border-radius: 5px;
 	  text-align: center;
-	}
-	.prompt-content .business-card-front:hover,
-	.prompt-content .business-card-back:hover {
-	  background-color: lightcoral;
 	}
 
 
@@ -196,7 +187,7 @@
       width: 100%;
       height: 200px;
       overflow: hidden;
-      background-image: url(./public/front@3x.png);
+      background-image: url(./cover/front@3x.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
@@ -417,9 +408,6 @@
 		<button on:click={submitForm}>Submit</button>
 	  </div>
 	</div>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@600&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap" />
-  
 	<div class="preview-section">
 	
 	  <h3>Front Side:</h3>
@@ -485,18 +473,57 @@
 	<div class="prompt-content">
 	  <p>Form Submitted!</p>
 	  <h3>Front Side:</h3>
-	  <div class="business-card-front">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.website}</div>
-	  </div>
+    <div class="business-card-front">
+	  <div class="front3" id="frontContainer">
+			<img class="icon5" alt="" src="./public/9-3@2x.png" />
+		
+		
+			<img class="icon6" alt="" src="./public/4-4@2x.png" />
+		
+		
+			<div class="fauget-catering1">
+			  <p class="fauget1">{formData.name}</p>
+			</div>
+		  </div>
+      </div>
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.designation}</div>
-		<div class="business-card-text">{formData.address}</div>
-		<div class="business-card-text">{formData.phoneNumber}</div>
-		<div class="business-card-text">{formData.website}</div>
-	  </div>
+			<div class="back3" id="backContainer">
+				<div class="frame">
+				  <img class="icon" alt="" src="./public/8-2@2x.png" />
+				</div>
+				<div class="frame1">
+				  <div class="frame2">
+					<div class="frame3">
+					  <img class="icon1" alt="" src="./public/4-3@2x.png" />
+			
+			
+					  <div class="fauget-catering">
+						{formData.name}
+					  </div>
+					</div>
+					<div class="frame4">
+					  <img class="icon2" alt="" src="./public/7-1@2x.png" />
+			
+			
+					  <div class="nagpurmaharashtraindia">{formData.address}</div>
+					</div>
+					<div class="frame5">
+					  <img class="icon2" alt="" src="./public/6-1@2x.png" />
+			
+			
+					  <div class="nagpurmaharashtraindia">{formData.email}</div>
+					</div>
+					<div class="frame6">
+					  <img class="icon2" alt="" src="./public/5-1@2x.png" />
+			
+			
+					  <div class="nagpurmaharashtraindia">{formData.phoneNumber}</div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+	    </div>
 	  <button on:click={closePrompt}>Close</button>
 	</div>
   </div>
