@@ -554,6 +554,14 @@
 			  </section>
 			</div>
 		</div>
+    <!-- svelte-ignore a11y-invalid-attribute -->
+		<a href="#" download="back.jpeg">
+			<button>Download Back (JPEG)</button>
+		  </a>
+		  <!-- svelte-ignore a11y-invalid-attribute -->
+		  <a href="#" download="back.pdf">
+        <button>Download Back (PDF)</button>
+		  </a>
 	  <button on:click={closePrompt}>Close</button>
 	</div>
   </div>
