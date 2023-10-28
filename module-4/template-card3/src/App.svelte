@@ -187,7 +187,7 @@
       width: 100%;
       height: 200px;
       overflow: hidden;
-      background-image: url(./cover/front@3x.png);
+      background-image: url(./front@3x.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
@@ -356,7 +356,7 @@
       position: relative;
       width: 100%;
       height: 200px;
-      background-image: url(./public/back@3x.png);
+      background-image: url(./back@3x.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
@@ -413,10 +413,10 @@
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
 		<div class="front3" id="frontContainer">
-			<img class="icon5" alt="" src="./public/9-3@2x.png" />
+			<img class="icon5" alt="" src="./a.png" />
 		
 		
-			<img class="icon6" alt="" src="./public/4-4@2x.png" />
+			<img class="icon6" alt="" src="./f.png" />
 		
 		
 			<div class="fauget-catering1">
@@ -428,12 +428,12 @@
 	    <div class="business-card-back">
 			<div class="back3" id="backContainer">
 				<div class="frame">
-				  <img class="icon" alt="" src="./public/8-2@2x.png" />
+				  <img class="icon" alt="" src="./b.png" />
 				</div>
 				<div class="frame1">
 				  <div class="frame2">
 					<div class="frame3">
-					  <img class="icon1" alt="" src="./public/4-3@2x.png" />
+					  <img class="icon1" alt="" src="./g.png" />
 			
 			
 					  <div class="fauget-catering">
@@ -441,19 +441,19 @@
 					  </div>
 					</div>
 					<div class="frame4">
-					  <img class="icon2" alt="" src="./public/7-1@2x.png" />
+					  <img class="icon2" alt="" src="./c.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.address}</div>
 					</div>
 					<div class="frame5">
-					  <img class="icon2" alt="" src="./public/6-1@2x.png" />
+					  <img class="icon2" alt="" src="./d.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.email}</div>
 					</div>
 					<div class="frame6">
-					  <img class="icon2" alt="" src="./public/5-1@2x.png" />
+					  <img class="icon2" alt="" src="./e.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.phoneNumber}</div>
@@ -475,10 +475,10 @@
 	  <h3>Front Side:</h3>
     <div class="business-card-front">
 	  <div class="front3" id="frontContainer">
-			<img class="icon5" alt="" src="./public/9-3@2x.png" />
+			<img class="icon5" alt="" src="./a.png" />
 		
 		
-			<img class="icon6" alt="" src="./public/4-4@2x.png" />
+			<img class="icon6" alt="" src="./f.png" />
 		
 		
 			<div class="fauget-catering1">
@@ -490,12 +490,12 @@
 	  <div class="business-card-back">
 			<div class="back3" id="backContainer">
 				<div class="frame">
-				  <img class="icon" alt="" src="./public/8-2@2x.png" />
+				  <img class="icon" alt="" src="./b.png" />
 				</div>
 				<div class="frame1">
 				  <div class="frame2">
 					<div class="frame3">
-					  <img class="icon1" alt="" src="./public/4-3@2x.png" />
+					  <img class="icon1" alt="" src="./g.png" />
 			
 			
 					  <div class="fauget-catering">
@@ -503,19 +503,19 @@
 					  </div>
 					</div>
 					<div class="frame4">
-					  <img class="icon2" alt="" src="./public/7-1@2x.png" />
+					  <img class="icon2" alt="" src="./c.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.address}</div>
 					</div>
 					<div class="frame5">
-					  <img class="icon2" alt="" src="./public/6-1@2x.png" />
+					  <img class="icon2" alt="" src="./d.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.email}</div>
 					</div>
 					<div class="frame6">
-					  <img class="icon2" alt="" src="./public/5-1@2x.png" />
+					  <img class="icon2" alt="" src="./e.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.phoneNumber}</div>
