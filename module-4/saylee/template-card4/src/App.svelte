@@ -1,10 +1,13 @@
 <script>
 	let formData = {
-	  name: "Name",
-	  designation: "Prof",
+	  company: "Healthcare",
+	  services: "Medical Services",
+	  website: "www.google.com",
+	  name: "Dr Krishna",
+	  designation: "MBBS ,MD ",
+	  phoneNumber: "1234567890",
+	  email: "Email@gmail.com",
 	  address: "Address",
-	  phoneNumber: "PhoneNumber",
-	  website: "Website",
 	};
   
 	let showPrompt = false;
@@ -89,7 +92,7 @@
 	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
-	  border: 2px solid #333;
+	  border: 1px solid #1ca46f;
 	  background-color: lightblue;
 	  font-family: 'Times New Roman', Times, serif;
 	  display: flex;
@@ -106,12 +109,12 @@
 	}
 
 	.prompt {
-	  position: fixed;
+	  position:fixed;
 	  top: 0;
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  display: flex;
+	  display:flex;
 	  justify-content: center;
 	  align-items: center;
 	  background-color: rgba(0, 0, 0, 0.7);
@@ -406,31 +409,44 @@
   {#if currentPage === "home"}
   <div class="business-card-container">
 	<div class="input-section">
-	  <h3>Your Business Card:</h3>
-	  <div class="form-group">
-		<label for="name">Name:</label>
-		<input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
+		<h3>Your Business Card:</h3>
+		<div class="form-group">
+		  <label for="company">Company:</label>
+		  <input type="text" id="company" bind:value={formData.company} placeholder="Your company" />
+		</div>
+		<div class="form-group">
+		  <label for="services">Services:</label>
+		  <input type="text" id="services" bind:value={formData.services} placeholder="Your tagline" />
+		</div>
+		<div class="form-group">
+		  <label for="website">Website:</label>
+		  <input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
+		</div>
+		<div class="form-group">
+		  <label for="name">Name:</label>
+		  <input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
+		</div>
+		<div class="form-group">
+		  <label for="designation">Designation:</label>
+		  <input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
+		</div>
+		<div class="form-group">
+		  <label for="phoneNumber">Phone Number:</label>
+		  <input type="text" id="phoneNumber" bind:value={formData.phoneNumber} placeholder="Your Phone Number with Country Code" />
+		</div>
+		<div class="form-group">
+		  <label for="email">email:</label>
+		  <input type="text" id="email" bind:value={formData.email} placeholder="Your email" />
+		</div>
+		<div class="form-group">
+		  <label for="address">Address:</label>
+		  <input type="text" id="address" bind:value={formData.address} placeholder="Your Address" />
+		</div>
+		
+		<div class="button-section">
+		  <button on:click={submitForm}>Apply</button>
+		</div>
 	  </div>
-	  <div class="form-group">
-		<label for="designation">Designation:</label>
-		<input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
-	  </div>
-	  <div class="form-group">
-		<label for="address">Address:</label>
-		<input type="text" id="address" bind:value={formData.address} placeholder="Your Address" />
-	  </div>
-	  <div class="form-group">
-		<label for="phoneNumber">Phone Number:</label>
-		<input type="text" id="phoneNumber" bind:value={formData.phoneNumber} placeholder="Your Phone Number with Country Code" />
-	  </div>
-	  <div class="form-group">
-		<label for="website">Website:</label>
-		<input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
-	  </div>
-	  <div class="button-section">
-		<button on:click={submitForm}>Apply</button>
-	  </div>
-	</div>
   
 	<div class="preview-section">
 	  <h3>Front Side:</h3>
@@ -446,7 +462,7 @@
 				<p class="healthcare">
 				  <b>Healthcare</b>
 				</p>
-				<p class="medical-servics">{formData.name}</p>
+				<p class="medical-servics">{formData.services}</p>
 			  </div>
 			</div>
 			<div class="frame-parent">
