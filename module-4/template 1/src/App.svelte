@@ -154,7 +154,7 @@
 		<input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
 	  </div>
 	  <div class="button-section">
-		<button on:click={submitForm}>Submit</button>
+		<button on:click={submitForm}>Apply</button>
 	  </div>
 	</div>
   
