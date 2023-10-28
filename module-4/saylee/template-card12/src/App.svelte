@@ -458,7 +458,7 @@
   
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
-		<div class="back12" id="back1Container" style="display: none;" data-animate-on-scroll>
+		<div class="back12" id="back1Container">
 			<div class="back12-child"></div>
 			<img class="logo-icon" alt="" src="./logo@2x.png" />
 			<div class="nameposition">
