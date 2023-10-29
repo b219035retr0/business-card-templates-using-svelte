@@ -295,7 +295,6 @@
 				<p class="p">{formData.phoneNumber}</p>
 				<p class="p">{formData.address}</p>
 				<p class="p">{formData.website}</p>
-				<p class="p">{formData.website}</p>
 			</div>
 		</div>
 	
