@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<style>
+    body {
+        margin: 0;
+        line-height: normal;
+      }
+      
+      :root {
+        /* fonts */
+        --font-news-cycle: "News Cycle";
+        --font-playfair-display: "Playfair Display";
+        --font-dm-serif-display: "DM Serif Display";
+      
+        /* font sizes */
+        --font-size-5xs-1: 7.1px;
+        --font-size-4xs-7: 8.7px;
+      
+        /* Colors */
+        --color-olivedrab: #7ba02f;
+        --color-white: #fff;
+      
+        /* Gaps */
+        --gap-sm: 14px;
+        --gap-0: 0px;
+      
+        /* Paddings */
+        --padding-11xs: 2px;
+      }
+
+      .frame-icon {
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.icon {
+  position: relative;
+  width: 57.14px;
+  height: 33.64px;
+  object-fit: cover;
+}
+.vegan {
+  margin: 0;
+}
+.for-wedding-birthday,
+.vegan-catering {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.vegan-catering {
+  font-weight: 600;
+  width: 158px;
+  height: 68px;
+}
+.for-wedding-birthday {
+  font-size: 7.14px;
+  font-family: var(--font-news-cycle);
+  color: #fffefe;
+  width: 170.57px;
+  height: 12.57px;
+}
+.frame {
+  flex: 1;
+  height: 163px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.frame-parent,
+.front {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.front {
+  position: relative;
+  background-color: var(--color-olivedrab);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  overflow: hidden;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25.71px;
+  color: var(--color-white);
+  font-family: var(--font-playfair-display);
+}
+@media screen and (max-width: 1200px) {
+  .frame-icon {
+    width: 453px;
+  }
+  .front {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .frame-icon {
+    height: 600px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: var(--padding-11xs);
+    padding-right: var(--padding-11xs);
+    box-sizing: border-box;
+  }
+  .front {
+    gap: var(--gap-sm);
+  }
+}
+@media screen and (max-width: 420px) {
+  .frame-icon {
+    height: 600px;
+  }
+}
+
+.icon1 {
+  position: relative;
+  width: 57.14px;
+  height: 33.64px;
+  object-fit: cover;
+}
+.vegan1 {
+  margin: 0;
+}
+.vegan-catering1 {
+  flex: 1;
+  position: relative;
+}
+.frame3 {
+  width: 128.29px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 13px;
+}
+.for-wedding-birthday1 {
+  align-self: stretch;
+  position: relative;
+}
+.frame2,
+.frame4 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.frame4 {
+  width: 258.57px;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  font-size: 7.14px;
+  font-family: var(--font-news-cycle);
+}
+.frame2 {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+}
+.frame-icon1,
+.frame1 {
+  width: 258.57px;
+  overflow: hidden;
+}
+.frame-icon1 {
+  position: relative;
+  height: 2.99px;
+  flex-shrink: 0;
+}
+.frame1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4.33px;
+}
+.green-vegan-food-catering-busi {
+  position: relative;
+  width: 124px;
+  height: 98px;
+  object-fit: cover;
+}
+.div,
+.hatim-hakkan {
+  position: relative;
+  display: inline-block;
+  width: 110.33px;
+  flex-shrink: 0;
+}
+.hatim-hakkan {
+  font-size: 13.71px;
+  font-family: var(--font-playfair-display);
+  height: 23.33px;
+}
+.div {
+  height: 14px;
+}
+.frame7 {
+  width: 119px;
+  height: 98px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4.67px;
+}
+.back,
+.frame5,
+.frame6,
+.frame7 {
+  overflow: hidden;
+  display: flex;
+}
+.frame6 {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.back,
+.frame5 {
+  flex-direction: column;
+}
+.frame5 {
+  align-self: stretch;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 8.67px;
+  font-family: var(--font-dm-serif-display);
+}
+.back {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 200px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16.66699981689453px 24.285999298095703px 11.666999816894531px
+    17.14299964904785px;
+  box-sizing: border-box;
+  gap: 15px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14.29px;
+  color: var(--color-olivedrab);
+  font-family: var(--font-playfair-display);
+}
+.back:active {
+  cursor: auto;
+}
+@media screen and (max-width: 1200px) {
+  .frame6 {
+    gap: var(--gap-sm);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .back {
+    height: 600px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-0);
+  }
+}
+@media screen and (max-width: 960px) {
+  .frame6 {
+    width: 300px;
+    height: 200px;
+  }
+  .back {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-0);
+  }
+}
+@media screen and (max-width: 420px) {
+  .frame6 {
+    height: 200px;
+  }
+  .back {
+    height: 600px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-0);
+  }
+}
+
+</style> 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=News Cycle:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="front" id="frontContainer">
+      <div class="frame-parent">
+        <img
+          class="frame-icon"
+          alt=""
+          src="./public/frame@2x.png"
+          id="frameImage"
+        />
+
+        <div class="frame">
+          <img class="icon" alt="" src="./public/3-1@2x.png" />
+
+          <div class="vegan-catering">
+            <p class="vegan">Vegan</p>
+            <p class="vegan">Catering</p>
+          </div>
+          <div class="for-wedding-birthday">
+            For wedding, birthday party & gathering
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="back" id="backContainer">
+      <div class="frame1">
+        <div class="frame2">
+          <div class="frame3">
+            <img class="icon1" alt="" src="./public/4-1@2x.png" />
+
+            <b class="vegan-catering1">
+              <p class="vegan1">Vegan</p>
+              <p class="vegan1">Catering</p>
+            </b>
+          </div>
+          <div class="frame4">
+            <div class="for-wedding-birthday1">
+              For wedding, birthday party & gathering
+            </div>
+          </div>
+        </div>
+        <img class="frame-icon1" alt="" src="./public/frame1.svg" />
+      </div>
+      <div class="frame5">
+        <div class="frame6">
+          <img
+            class="green-vegan-food-catering-busi"
+            alt=""
+            src="./public/green-vegan-food-catering-business-card-2@2x.png"
+          />
+
+          <div class="frame7">
+            <b class="hatim-hakkan">Hatim Hakkan</b>
+            <div class="div">+91 12345 67890</div>
+            <div class="div">Nagpur,Maharashtra,India</div>
+            <div class="div">20010997@ycce.in</div>
+            <div class="div">https://www.google.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        var frontContainer = document.getElementById("frontContainer");
+        var backContainer = document.getElementById("backContainer");
+
+        frontContainer.style.display = "block";
+        backContainer.style.display = "none";
+
+        if (frontContainer && backContainer) {
+        
+        frontContainer.addEventListener("click", function (e) {
+          frontContainer.style.display = "none";
+          backContainer.style.display = "block";
+        });
+      
+        backContainer.addEventListener("click", function (e) {
+          frontContainer.style.display = "block";
+          backContainer.style.display = "none";
+        });}
+      </script>
+      
+  </body>
+</html>
