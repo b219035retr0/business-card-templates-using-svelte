@@ -28,12 +28,9 @@
   <style>
 	.business-card-container {
 	  display: flex;
-<<<<<<< Updated upstream:module-4/saylee/template-card17/src/App.svelte
 	  justify-content: space-evenly;
-=======
 	  justify-content: space-between;
 	  font-family: 'Times New Roman', Times, serif ;
->>>>>>> Stashed changes:module-4/template-card17/src/App.svelte
 	}
 	.input-section,
 	.preview-section {
@@ -91,7 +88,6 @@
 	}
   
 	.preview-section .business-card-front,
-<<<<<<< Updated upstream:module-4/saylee/template-card17/src/App.svelte
 	.prompt-content .business-card-front,
 	.preview-section .business-card-back,
 	.prompt-content .business-card-back {
@@ -99,14 +95,9 @@
 	  height: 200px;
 	  border: 2px solid #333;
     font-family: 'Playfair Display';
-=======
-	.preview-section .business-card-back,
-	.prompt-content .business-card-back,
-	.prompt-content .business-card-front {
 	  width: 300px;
 	  height: 200px;
 	  border: 2px solid #333;
->>>>>>> Stashed changes:module-4/template-card17/src/App.svelte
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
@@ -127,7 +118,6 @@
 	  border-radius: 5px;
 	  text-align: center;
 	}
-<<<<<<< Updated upstream:module-4/saylee/template-card17/src/App.svelte
 
   :root {
       /* fonts */
@@ -144,8 +134,6 @@
       --color-white: #fff;
     }
     /* front css */
-=======
->>>>>>> Stashed changes:module-4/template-card17/src/App.svelte
     .frame,
     .icon {
       overflow: hidden;

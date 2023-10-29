@@ -170,7 +170,6 @@
 		width: 300px;
 		height: 200px;
 		overflow: hidden;
-		background-image: url(./f.png);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
@@ -234,7 +233,7 @@
 		width: 300px;
 		height: 200px;
 		overflow: hidden;
-		background-image: url(./b.png);
+		
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
