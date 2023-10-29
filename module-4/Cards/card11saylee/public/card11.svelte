@@ -7,7 +7,7 @@
 
 </script>
 <div class="comp_front1" id="frontContainer">
-        <img class="front1-child" alt="" src="./public/rectangle-1.svg" />
+        <img class="front1-child" alt="" src="./public/rectangle-1.png" />
 
 
         <div class="chocobella">Chocobella</div>
@@ -187,7 +187,7 @@
 
     <!-- back -->
     <div class="back1" id="backContainer">
-        <img class="back1-child" alt="" src="./public/rectangle-2.svg" />
+        <img class="back1-child" alt="" src="./public/rectangle-2.png" />
 
 
         <div class="chocobella1">Chocobella</div>
