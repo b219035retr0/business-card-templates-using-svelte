@@ -1,6 +1,3 @@
-<script>
-
-</script>
 <div class="comp_front4" id="frontContainer">
     <div class="wwwgooglecom-wrapper">
       <div class="wwwgooglecom">www.google.com</div>
