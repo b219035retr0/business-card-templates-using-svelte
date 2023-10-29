@@ -1,4 +1,5 @@
 <script>
+	import Download from "../../../Download.svelte";
 	let formData = {
 	  name: "Name",
 	  designation: "Prof",
@@ -306,10 +307,10 @@
   
   {#if showPrompt}
   <div class="prompt">
-	<div class="prompt-content">
+	<div class="prompt-content" id="prompt-content">
 	  <p>Form Submitted!</p>
 	  <h3>Front Side:</h3>
-	  <div class="business-card-front">
+	  <div class="business-card-front" id="card-front">
 		<div class="front1" id="frontContainer">
 			<img class="front1-child" alt="" src="./r1.png" />
 	
@@ -317,17 +318,8 @@
 			<b class="cakes-cookies">{formData.name}</b>
 		</div>
 	  </div>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="front.jpeg">
-		<button>Download Front (JPEG)</button>
-	  </a>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="front.pdf">
-		<button>Download Front (PDF)</button>
-	  </a>
-  
 	  <h3>Reverse Side:</h3>
-	  <div class="business-card-back">
+	  <div class="business-card-back" id="card-back">
 		<div class="back1" id="backContainer">
 			<img class="back1-child" alt="" src="./r2.png" />
 	
@@ -340,17 +332,9 @@
 				<p class="p">{formData.website}</p>
 			</div>
 		</div>
-	
 	  </div>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="back.jpeg">
-		<button>Download Back (JPEG)</button>
-	  </a>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="back.pdf">
-		<button>Download Back (PDF)</button>
-	  </a>
 	  <button on:click={closePrompt}>Close</button>
+	  <Download />
 	</div>
   </div>
   {/if}
