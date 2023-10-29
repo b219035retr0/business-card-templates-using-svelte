@@ -26,7 +26,7 @@
   <style>
 	.business-card-container {
 	  display: flex;
-	  justify-content: space-evenly;
+	  justify-content: space-between;
 	}
   
 	.input-section,

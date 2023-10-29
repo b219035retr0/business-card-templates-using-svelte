@@ -102,7 +102,7 @@
     <div class="preview-section">
       <h3>Front Side:</h3>
       <div class="business-card-front">
-        <img class="dr-icon" alt="Doctor" src="../public/dr@2x.png" />
+        <img class="dr-icon" alt="Doctor" src="./dr@2x.png" />
         <div class="center-items">
           <div class="business-card-text name">{formData.name}</div>
           <div class="business-card-text domain">{formData.domain}</div>
@@ -122,18 +122,14 @@
           <img
             class="heart-with-pulse"
             alt="Heart With Pulse"
-            src="../public/heart-with-pulse@2x.png"
+            src="./heart-with-pulse@2x.png"
           />
         </div>
 
         <table>
           <tr>
             <td>
-              <img
-                class="stethoscope-icon"
-                alt=""
-                src="../public/stethoscope@2x.png"
-              />
+              <img class="stethoscope-icon" alt="" src="./stethoscope@2x.png" />
             </td>
             <td>
               <p class="business-card-text service1">
@@ -146,7 +142,7 @@
               <img
                 class="organ-transplantation-icon"
                 alt=""
-                src="../public/organ-transplantation@2x.png"
+                src="./organ-transplantation@2x.png"
               />
             </td>
             <td>
@@ -158,11 +154,7 @@
 
           <tr>
             <td>
-              <img
-                class="hospital-3-icon"
-                alt=""
-                src="../public/hospital-3@2x.png"
-              />
+              <img class="hospital-3-icon" alt="" src="./hospital-3@2x.png" />
             </td>
             <td>
               <p class="business-card-text service3">
@@ -184,7 +176,7 @@
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
       <div class="business-card-front">
-        <img class="dr-icon" alt="Doctor" src="../public/dr@2x.png" />
+        <img class="dr-icon" alt="Doctor" src="./dr@2x.png" />
         <div class="center-items">
           <div class="business-card-text name">{formData.name}</div>
           <div class="business-card-text domain">{formData.domain}</div>
@@ -204,18 +196,14 @@
           <img
             class="heart-with-pulse"
             alt="Heart With Pulse"
-            src="../public/heart-with-pulse@2x.png"
+            src="./heart-with-pulse@2x.png"
           />
         </div>
 
         <table>
           <tr>
             <td>
-              <img
-                class="stethoscope-icon"
-                alt=""
-                src="../public/stethoscope@2x.png"
-              />
+              <img class="stethoscope-icon" alt="" src="./stethoscope@2x.png" />
             </td>
             <td>
               <p class="business-card-text service1">
@@ -228,7 +216,7 @@
               <img
                 class="organ-transplantation-icon"
                 alt=""
-                src="../public/organ-transplantation@2x.png"
+                src="./organ-transplantation@2x.png"
               />
             </td>
             <td>
@@ -240,11 +228,7 @@
 
           <tr>
             <td>
-              <img
-                class="hospital-3-icon"
-                alt=""
-                src="../public/hospital-3@2x.png"
-              />
+              <img class="hospital-3-icon" alt="" src="./hospital-3@2x.png" />
             </td>
             <td>
               <p class="business-card-text service3">
@@ -384,8 +368,10 @@
   /* ---------------------------------------------- */
   /* front css */
   .dr-icon {
+    margin-top: 10px;
+    height: 100px;
     object-fit: cover;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .heart-with-pulse {
@@ -394,7 +380,7 @@
     height: 45px;
     float: inline-end;
     object-fit: cover;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .hospital-3-icon,
@@ -406,7 +392,7 @@
     width: 20px;
     height: 20px;
     object-fit: cover;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .all0 {

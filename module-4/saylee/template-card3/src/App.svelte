@@ -26,7 +26,7 @@
   <style>
 	.business-card-container {
 	  display: flex;
-	  justify-content: space-between;
+	  justify-content: space-evenly;
 	}
   
 	.input-section,
@@ -84,10 +84,12 @@
 	}
   
 	.preview-section .business-card-front,
-	.prompt-content .business-card-front {
+	.prompt-content .business-card-front,
+	.preview-section .business-card-back,
+	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
-	  border: 2px solid #333;
+	  border: 1px solid #333;
 	  background-color: gray;
 	  font-family: 'Playfair Display';
 	  display: flex;
@@ -95,18 +97,7 @@
 	  align-items: center;
 	  justify-content: center;
 	}
-	.preview-section .business-card-back,
-	.prompt-content .business-card-back {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  background-color: gray;
-	  font-family: 'Playfair Display';
-	  display: flex;
-	  flex-direction: column;
-	  align-items: left;
-	  justify-content: center;
-	}
+	
 	.prompt {
 	  position: fixed;
 	  top: 0;
@@ -184,13 +175,12 @@
 
     .front3 {
       position: relative;
-      width: 100%;
+      width: 300px;
       height: 200px;
       overflow: hidden;
-      background-image: url(./cover/front@3x.png);
+      background-image: url(./front@3x.png);
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top;
+      background-position: bottom;
       cursor: pointer;
       text-align: center;
       font-size: 25.74px;
@@ -201,8 +191,8 @@
 
     @media screen and (max-width: 1200px) {
       .front3 {
-        width: 1050px;
-        height: 600px;
+        width: 300px;
+        height: 200px;
       }
     }
 
@@ -356,7 +346,7 @@
       position: relative;
       width: 100%;
       height: 200px;
-      background-image: url(./public/back@3x.png);
+      background-image: url(./back@3x.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
@@ -413,10 +403,10 @@
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
 		<div class="front3" id="frontContainer">
-			<img class="icon5" alt="" src="./public/9-3@2x.png" />
+			<img class="icon5" alt="" src="./a.png" />
 		
 		
-			<img class="icon6" alt="" src="./public/4-4@2x.png" />
+			<img class="icon6" alt="" src="./f.png" />
 		
 		
 			<div class="fauget-catering1">
@@ -428,12 +418,12 @@
 	    <div class="business-card-back">
 			<div class="back3" id="backContainer">
 				<div class="frame">
-				  <img class="icon" alt="" src="./public/8-2@2x.png" />
+				  <img class="icon" alt="" src="./b.png" />
 				</div>
 				<div class="frame1">
 				  <div class="frame2">
 					<div class="frame3">
-					  <img class="icon1" alt="" src="./public/4-3@2x.png" />
+					  <img class="icon1" alt="" src="./g.png" />
 			
 			
 					  <div class="fauget-catering">
@@ -441,19 +431,19 @@
 					  </div>
 					</div>
 					<div class="frame4">
-					  <img class="icon2" alt="" src="./public/7-1@2x.png" />
+					  <img class="icon2" alt="" src="./c.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.address}</div>
 					</div>
 					<div class="frame5">
-					  <img class="icon2" alt="" src="./public/6-1@2x.png" />
+					  <img class="icon2" alt="" src="./d.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.email}</div>
 					</div>
 					<div class="frame6">
-					  <img class="icon2" alt="" src="./public/5-1@2x.png" />
+					  <img class="icon2" alt="" src="./e.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.phoneNumber}</div>
@@ -475,10 +465,10 @@
 	  <h3>Front Side:</h3>
     <div class="business-card-front">
 	  <div class="front3" id="frontContainer">
-			<img class="icon5" alt="" src="./public/9-3@2x.png" />
+			<img class="icon5" alt="" src="./a.png" />
 		
 		
-			<img class="icon6" alt="" src="./public/4-4@2x.png" />
+			<img class="icon6" alt="" src="./f.png" />
 		
 		
 			<div class="fauget-catering1">
@@ -490,12 +480,12 @@
 	  <div class="business-card-back">
 			<div class="back3" id="backContainer">
 				<div class="frame">
-				  <img class="icon" alt="" src="./public/8-2@2x.png" />
+				  <img class="icon" alt="" src="./b.png" />
 				</div>
 				<div class="frame1">
 				  <div class="frame2">
 					<div class="frame3">
-					  <img class="icon1" alt="" src="./public/4-3@2x.png" />
+					  <img class="icon1" alt="" src="./g.png" />
 			
 			
 					  <div class="fauget-catering">
@@ -503,19 +493,19 @@
 					  </div>
 					</div>
 					<div class="frame4">
-					  <img class="icon2" alt="" src="./public/7-1@2x.png" />
+					  <img class="icon2" alt="" src="./c.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.address}</div>
 					</div>
 					<div class="frame5">
-					  <img class="icon2" alt="" src="./public/6-1@2x.png" />
+					  <img class="icon2" alt="" src="./d.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.email}</div>
 					</div>
 					<div class="frame6">
-					  <img class="icon2" alt="" src="./public/5-1@2x.png" />
+					  <img class="icon2" alt="" src="./e.png" />
 			
 			
 					  <div class="nagpurmaharashtraindia">{formData.phoneNumber}</div>
@@ -524,6 +514,14 @@
 				</div>
 			  </div>
 	    </div>
+		<!-- svelte-ignore a11y-invalid-attribute -->
+		<a href="#" download="back.jpeg">
+			<button>Download Back (JPEG)</button>
+		  </a>
+		  <!-- svelte-ignore a11y-invalid-attribute -->
+		  <a href="#" download="back.pdf">
+			<button>Download Back (PDF)</button>
+		  </a>
 	  <button on:click={closePrompt}>Close</button>
 	</div>
   </div>
