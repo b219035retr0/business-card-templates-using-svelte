@@ -522,6 +522,14 @@
 			</div>
 		    
 		</div>
+     <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" download="front.jpeg">
+      <button>Download Front (JPEG)</button>
+      </a>
+      <!-- svelte-ignore a11y-invalid-attribute -->
+      <a href="#" download="front.pdf">
+      <button>Download Front (PDF)</button>
+      </a>
 		<h3>Reverse Side:</h3>
 		<div class="business-card-back">
 		  <div class="back" id="backContainer">
