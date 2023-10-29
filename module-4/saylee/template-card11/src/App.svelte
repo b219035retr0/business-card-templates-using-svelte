@@ -169,7 +169,7 @@
 		width: 300px;
 		height: 200px;
 		overflow: hidden;
-		background-image: url(./front@3x.png);
+		background-image: url(./f.png);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
@@ -233,7 +233,7 @@
 		width: 300px;
 		height: 200px;
 		overflow: hidden;
-		background-image: url(./back@3x.png);
+		background-image: url(./b.png);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
@@ -278,7 +278,7 @@
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
 		<div class="front1" id="frontContainer">
-			<img class="front1-child" alt="" src="./rectangle-1.png" />
+			<img class="front1-child" alt="" src="./r1.png" />
 	
 			<div class="chocobella">{formData.name}</div>
 			<b class="cakes-cookies">{formData.name}</b>
@@ -287,7 +287,7 @@
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
 		<div class="back1" id="backContainer">
-			<img class="back1-child" alt="" src="./rectangle-2.png" />
+			<img class="back1-child" alt="" src="./r2.png" />
 	
 			<div class="chocobella1">{formData.name}</div>
 			<b class="cakes-cookies1">{formData.designation}</b>
@@ -311,7 +311,7 @@
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
 		<div class="front1" id="frontContainer">
-			<img class="front1-child" alt="" src="./rectangle-1.png" />
+			<img class="front1-child" alt="" src="./r1.png" />
 	
 			<div class="chocobella">{formData.name}</div>
 			<b class="cakes-cookies">{formData.name}</b>
@@ -329,7 +329,7 @@
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
 		<div class="back1" id="backContainer">
-			<img class="back1-child" alt="" src="./rectangle-2.png" />
+			<img class="back1-child" alt="" src="./r2.png" />
 	
 			<div class="chocobella1">{formData.name}</div>
 			<b class="cakes-cookies1">{formData.designation}</b>
