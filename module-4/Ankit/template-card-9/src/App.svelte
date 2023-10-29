@@ -26,6 +26,26 @@
   const closePrompt = () => {
     showPrompt = false;
   };
+  var frontContainer = document.getElementById("frontContainer");
+        var backContainer = document.getElementById("backContainer");
+
+
+        frontContainer.style.display = "block";
+        backContainer.style.display = "none";
+
+        if (frontContainer && backContainer) {
+            frontContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "none"; // Hide the frontContainer
+                backContainer.style.display = "block"; // Show the backContainer
+            });
+
+            backContainer.addEventListener("click", function (e) {
+                frontContainer.style.display = "block"; // Hide the frontContainer
+                backContainer.style.display = "none"; // Show the backContainer
+            });
+
+
+        }
 </script>
 
 {#if currentPage === "home"}

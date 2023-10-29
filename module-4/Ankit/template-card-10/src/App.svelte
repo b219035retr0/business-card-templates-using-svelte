@@ -1,4 +1,5 @@
 <script>
+  import Download from "../../../Download.svelte";
   let formData = {
     name: "Business",
     owner: "John Doe",
@@ -94,42 +95,60 @@
         />
       </div>
       <div class="button-section">
-        <button on:click={submitForm}>Submit</button>
+        <button on:click={submitForm}>Apply</button>
       </div>
     </div>
 
     <div class="preview-section">
       <h3>Front Side:</h3>
       <div class="business-card-front">
-        <img class="wolf-icon" alt="Logo" src="../public/wolf@2x.png" />
+        <img class="wolf-icon" alt="Logo" src="./wolf@2x.png" />
         <div class="business-card-text name">{formData.name}</div>
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back left-items">
-        <div class="padding-left">
-          <div class="business-card-text owner">{formData.owner}</div>
-          <!-- <div class="business-card-text">{formData.name}</div> -->
-          <i class="business-card-text">{formData.profession}</i>
-          <div class="gap" />
-          <div class="business-card-text">{formData.phoneNumber}</div>
-          <div class="business-card-text">{formData.website}</div>
-          <div class="business-card-text">{formData.email}</div>
-          <div class="business-card-text">{formData.address}</div>
-        </div>
-        <!-- <img class="website-icon" alt="Website" src="../public/website@2x.png" /> -->
+      <div class="business-card-back flex-row">
+        <div class="business-card-text owner">{formData.owner}</div>
+        <!-- <div class="business-card-text">{formData.name}</div> -->
+        <i class="business-card-text">{formData.profession}</i>
+        <div class="gap" />
+        <table>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Call" src="./phone@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.phoneNumber}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Website" src="./website@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.website}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="" src="./circled-envelope@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.email}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Address" src="./address@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.address}</div>
+            </td>
+          </tr>
+        </table>
+        <img class="wolf-icon-rev" alt="" src="./wolf@2x.png" />
 
-        <!-- <img class="phone-icon" alt="Call" src="../public/phone@2x.png" /> -->
-
-        <!-- <img class="address-icon" alt="Address" src="../public/address@2x.png" /> -->
-
-        <img
-          class="circled-envelope-icon"
-          alt=""
-          src="../public/circled-envelope@2x.png"
-        />
-
-        <img class="wolf-icon1" alt="" src="../public/wolf@2x.png" />
+        <!-- <div class="rectangle" /> -->
       </div>
     </div>
   </div>
@@ -140,39 +159,11 @@
     <div class="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
-      <div class="business-card-front">
-        <img class="wolf-icon" alt="Logo" src="../public/wolf@2x.png" />
-        <div class="business-card-text name">{formData.name}</div>
-      </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back left-items">
-        <div class="padding-left">
-          <div class="business-card-text owner">{formData.owner}</div>
-          <!-- <div class="business-card-text">{formData.name}</div> -->
-          <i class="business-card-text">{formData.profession}</i>
-          <div class="gap" />
-          <div class="business-card-text">{formData.phoneNumber}</div>
-          <div class="business-card-text">{formData.website}</div>
-          <div class="business-card-text">{formData.email}</div>
-          <div class="business-card-text">{formData.address}</div>
-        </div>
-        <!-- <img class="website-icon" alt="Website" src="../public/website@2x.png" /> -->
-
-        <!-- <img class="phone-icon" alt="Call" src="../public/phone@2x.png" /> -->
-
-        <!-- <img class="address-icon" alt="Address" src="../public/address@2x.png" /> -->
-
-        <img
-          class="circled-envelope-icon"
-          alt=""
-          src="../public/circled-envelope@2x.png"
-        />
-
-        <img class="wolf-icon1" alt="" src="../public/wolf@2x.png" />
-      </div>
 
       <button on:click={closePrompt}>Close</button>
+      <Download />
     </div>
   </div>
 {/if}
@@ -241,7 +232,7 @@
   .prompt-content .business-card-front {
     width: 300px;
     height: 200px;
-    border: 2px solid #333;
+    /* border: 2px solid #333; */
     background-color: lightblue;
     /* font-family: "Times New Roman", Times, serif; */
     display: flex;
@@ -255,16 +246,16 @@
   .prompt-content .business-card-back {
     width: 300px;
     height: 200px;
-    border: 2px solid #333;
-    background-color: lightblue;
+    /* border: 2px solid #333; */
+    /* background-color: lightblue; */
     /* font-family: "Times New Roman", Times, serif; */
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
 
-    background-color: #2e224a;
-    color: white;
+    background-color: #fff;
+    /* color: #2e224a; */
   }
   .preview-section .business-card-front:hover,
   .preview-section .business-card-back:hover {
@@ -285,6 +276,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 102;
   }
 
   .prompt-content {
@@ -300,96 +292,38 @@
 
   /* ---------------------------------------------- */
   /* front css */
-  .dr-icon {
-    object-fit: cover;
-    border: 1px solid blue;
-  }
-
-  .heart-with-pulse {
-    /* position: absolute; */
-    width: 41px;
-    height: 45px;
-    float: inline-end;
-    object-fit: cover;
-    border: 1px solid blue;
-  }
-
-  .hospital-3-icon,
-  .organ-transplantation-icon,
-  .stethoscope-icon {
-    /* position: absolute; */
-    top: calc(50% + 5px);
-    left: calc(50% - 74px);
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    border: 1px solid blue;
-  }
-
-  .all0 {
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-
-  .center {
-    align-items: center;
-  }
-
-  .service1,
-  .service2,
-  .service3 {
-    padding: 0;
-    margin: 0;
-  }
-
-  .flex {
-    display: flex;
-  }
 
   .name {
     font-size: xx-large;
     font-weight: bolder;
+    margin-top: -8px;
   }
-
-  .center-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 16px;
-    margin-bottom: 16px;
-  }
-
-  .left-items {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    /* justify-content: center; */
-    /* padding-left: 30px; */
-  }
-
-  .padding-left {
-    margin-top: -2px;
-    margin-bottom: -2px;
-    margin-left: 32px;
-    margin-right: 96px;
-
-    height: 100%;
-    padding: 8px;
-    padding-top: 16px;
-    background-color: snow;
-    color: #2e224a;
-  }
-
   .owner {
     font-size: large;
     font-weight: bolder;
   }
 
   .gap {
-    margin-top: 24px;
+    margin-top: 12px;
+  }
+
+  .icon {
+    height: 16px;
+    margin: 0;
+  }
+
+  .align {
+    align-items: center;
+    margin: 0;
   }
 
   /* ----------------------------- */
+
+  .wolf-icon {
+    height: 96px;
+  }
+  .wolf-icon-rev {
+    height: 56px;
+    width: 56px;
+  }
 </style>
