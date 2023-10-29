@@ -112,7 +112,7 @@
 
     <div class="preview-section">
       <h3>Front Side:</h3>
-      <div class="business-card-front">
+      <div class="business-card-front" id="">
         <svg
           width="44"
           height="43"
@@ -153,7 +153,7 @@
 
 {#if showPrompt}
   <div class="prompt">
-    <div class="prompt-content">
+    <div class="prompt-content" id="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
       <div class="business-card-front" id="card-front">
