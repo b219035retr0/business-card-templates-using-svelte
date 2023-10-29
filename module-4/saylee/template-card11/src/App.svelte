@@ -105,10 +105,6 @@
 	  background-color: lightcoral;
 	}
   
-	.business-card-text {
-	  max-width: 80%;
-	}
-  
 	.prompt {
 	  position: fixed;
 	  top: 0;
@@ -127,7 +123,127 @@
 	  border-radius: 5px;
 	  text-align: center;
 	}
-  </style>
+
+
+	:root {
+		/* fonts */
+		--font-josefin-sans: "Josefin Sans";
+		--font-josefin-slab: "Josefin Slab";
+		--font-island-moments: "Island Moments";
+
+		/* Colors */
+		--color-black: #000;
+	}
+
+	/* front css */
+	.front1-child {
+		position: absolute;
+		top: calc(50% - 41px);
+		left: calc(50% - 150px);
+		width: 300px;
+		height: 89px;
+	}
+
+	.cakes-cookies,
+	.chocobella {
+		position: absolute;
+		top: calc(50% - 28px);
+		left: calc(50% - 62px);
+		display: inline-block;
+		width: 128px;
+		height: 36px;
+	}
+
+	.cakes-cookies {
+		top: calc(50% + 8px);
+		left: calc(50% - 42px);
+		font-size: 12px;
+		font-family: var(--font-josefin-slab);
+		width: 84px;
+		height: 6px;
+	}
+
+	.front1 {
+		position: relative;
+		border-radius: 12px;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+		background-image: url(./front@3x.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+		cursor: pointer;
+		text-align: center;
+		font-size: 40px;
+		color: var(--color-black);
+		font-family: var(--font-island-moments);
+	}
+
+
+	/* back css */
+
+	.back1-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 192px;
+		height: 200px;
+	}
+
+	.cakes-cookies1,
+	.chocobella1 {
+		position: absolute;
+		top: 22px;
+		left: 17px;
+		display: inline-block;
+		width: 128px;
+		height: 36px;
+	}
+
+	.cakes-cookies1 {
+		top: 58px;
+		left: 26px;
+		font-size: 12px;
+		font-family: var(--font-josefin-slab);
+		width: 84px;
+		height: 6px;
+	}
+
+	.p {
+		margin: 0;
+	}
+
+	.chocobellafriends-colony-nag-container1 {
+		position: absolute;
+		top: 123px;
+		left: 25px;
+		font-size: 10px;
+		font-family: var(--font-josefin-sans);
+		color: #1e1e1e;
+		text-align: left;
+		display: inline-block;
+		width: 167px;
+		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.back1 {
+		position: relative;
+		border-radius: 12px;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+		background-image: url(./back@3x.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+		cursor: pointer;
+		text-align: center;
+		font-size: 40px;
+		color: var(--color-black);
+		font-family: var(--font-island-moments);
+	}
+</style>
   
   {#if currentPage === "home"}
   <div class="business-card-container">
@@ -161,16 +277,28 @@
 	<div class="preview-section">
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.website}</div>
+		<div class="front1" id="frontContainer">
+			<img class="front1-child" alt="" src="./rectangle-1.png" />
+	
+			<div class="chocobella">{formData.name}</div>
+			<b class="cakes-cookies">{formData.name}</b>
+		</div>
 	  </div>
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.designation}</div>
-		<div class="business-card-text">{formData.address}</div>
-		<div class="business-card-text">{formData.phoneNumber}</div>
-		<div class="business-card-text">{formData.website}</div>
+		<div class="back1" id="backContainer">
+			<img class="back1-child" alt="" src="./rectangle-2.png" />
+	
+			<div class="chocobella1">{formData.name}</div>
+			<b class="cakes-cookies1">{formData.designation}</b>
+			<div class="chocobellafriends-colony-nag-container1">
+				<p class="p">{formData.phoneNumber}</p>
+				<p class="p">{formData.address}</p>
+				<p class="p">{formData.website}</p>
+				<p class="p">{formData.website}</p>
+			</div>
+		</div>
+	
 	  </div>
 	</div>
   </div>
@@ -182,8 +310,12 @@
 	  <p>Form Submitted!</p>
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.website}</div>
+		<div class="front1" id="frontContainer">
+			<img class="front1-child" alt="" src="./rectangle-1.png" />
+	
+			<div class="chocobella">{formData.name}</div>
+			<b class="cakes-cookies">{formData.name}</b>
+		</div>
 	  </div>
 	  <!-- svelte-ignore a11y-invalid-attribute -->
 	  <a href="#" download="front.jpeg">
@@ -196,11 +328,19 @@
   
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.designation}</div>
-		<div class="business-card-text">{formData.address}</div>
-		<div class="business-card-text">{formData.phoneNumber}</div>
-		<div class="business-card-text">{formData.website}</div>
+		<div class="back1" id="backContainer">
+			<img class="back1-child" alt="" src="./rectangle-2.png" />
+	
+			<div class="chocobella1">{formData.name}</div>
+			<b class="cakes-cookies1">{formData.designation}</b>
+			<div class="chocobellafriends-colony-nag-container1">
+				<p class="p">{formData.phoneNumber}</p>
+				<p class="p">{formData.address}</p>
+				<p class="p">{formData.website}</p>
+				<p class="p">{formData.website}</p>
+			</div>
+		</div>
+	
 	  </div>
 	  <!-- svelte-ignore a11y-invalid-attribute -->
 	  <a href="#" download="back.jpeg">
