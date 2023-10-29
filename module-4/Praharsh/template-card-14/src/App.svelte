@@ -1,144 +1,323 @@
 <script>
-	let formData = {
-	  name: "Name",
-	  designation: "Prof",
-	  address: "Address",
-	  phoneNumber: "PhoneNumber",
-	  website: "Website",
-	};
+  import Download from "../../Download.svelte";
+  // add ID for card-front card-back in promp container
+
+  let formData = {
+    name: "Name",
+    designation: "Prof",
+    address: "Address",
+    phoneNumber: "PhoneNumber",
+    website: "Website",
+    email: "Email"
+};
+
+  let showPrompt = false;
+  let currentPage = "home";
+
+  const changePage = (page) => {
+    currentPage = page;
+  };
+
+  const submitForm = () => {
+    showPrompt = true;
+  };
+
+  const closePrompt = () => {
+    showPrompt = false;
+  };
+</script>
+
+{#if currentPage === "home"}
+  <div class="business-card-container">
+    <div class="input-section">
+      <h3>Your Business Card:</h3>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          bind:value={formData.name}
+          placeholder="Your Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="designation">Designation:</label>
+        <input
+          type="text"
+          id="designation"
+          bind:value={formData.designation}
+          placeholder="Your Designation"
+        />
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input
+          type="text"
+          id="address"
+          bind:value={formData.address}
+          placeholder="Your Address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input
+          type="text"
+          id="phoneNumber"
+          bind:value={formData.phoneNumber}
+          placeholder="Your Phone Number with Country Code"
+        />
+      </div>
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input
+          type="text"
+          id="website"
+          bind:value={formData.website}
+          placeholder="Your Website"
+        />
+        <div class="form-group">
+          <label for="Email">Email:</label>
+          <input
+            type="text"
+            id="Email"
+            bind:value={formData.email}
+            placeholder="Your Email"
+          />
+      </div>
+      <div class="button-section">
+        <button on:click={submitForm}>Apply</button>
+      </div>
+    </div></div>
+  </div>
+
+    <div class="preview-section">
+      <h3>Front Side:</h3>
+      <div class="business-card-front">
+        <div class="property-1default-parent">
+          <div class="property-1default">
+            <img class="ml-1-icon" alt="" src="./public/ml_1.png" />
+    
+            <div class="phil-dunphy-parent">
+              <b class="phil-dunphy">{formData.name}</b>
+              <div class="real-estate-agent">{formData.designation}</div>
+            </div>
+            <img class="vector-icon" alt="" src="./public/Vector.png" />
+          </div>
+      </div><div class="property-1variant2">
+        <div class="phil-dunphy-parent">
+          <b class="phil-dunphy">{formData.name}</b>
+          <div class="real-estate-agent">{formData.designation}</div>
+        </div>
+        <img class="vector-icon" alt="" src="./public/vector.svg" />
+
+        <div class="pp-1-parent">
+          <img class="pp-1-icon" alt="" src="./public/pp_1.png" />
+
+          <img class="vector-icon2" alt="" src="./public/vectorb.png" />
+        </div></div>
+
+      <h3>Reverse Side:</h3>
+      <div class="business-card-back">
+        <div class="phil-dunphy-container">
+          <b class="phil-dunphy2">{formData.name}</b>
+          <div class="real-estate-agent2">{formData.designation}</div>
+        </div>
+        <div class="vector-parent">
+          <img class="vector-icon3" alt="" src="./public/vector2.svg" />
+
+          <img class="vector-icon4" alt="" src="./public/vector3.svg" />
+
+          <div class="div">{formData.phoneNumber}</div>
+          <div class="wwwphildunphycom">{formData.website}</div>
+          <div class="philgmailcom">{formData.email}</div>
+          <div class="toit-street-usa">{formData.address}</div>
+        </div>
+        <img class="vector-icon5" alt="" src="./public/vector4.svg" />
+
+        <img class="vector-icon6" alt="" src="./public/vector5.svg" />
+      </div>
+    </div>
+  </div>
+{/if}
+
+{#if showPrompt}
+  <div class="prompt">
+    <div class="prompt-content">
+      <p>Form Submitted!</p>
+      <h3>Front Side:</h3>
+      <div class="business-card-front">
+        <div class="property-1default-parent">
+          <div class="property-1default">
+            <img class="ml-1-icon" alt="" src="./public/ml_1.png" />
+    
+            <div class="phil-dunphy-parent">
+              <b class="phil-dunphy">{formData.name}</b>
+              <div class="real-estate-agent">{formData.designation}</div>
+            </div>
+            <img class="vector-icon" alt="" src="./public/Vector.png" />
+          </div>
+      </div><div class="property-1variant2">
+        <div class="phil-dunphy-parent">
+          <b class="phil-dunphy">{formData.name}</b>
+          <div class="real-estate-agent">{formData.designation}</div>
+        </div>
+        <img class="vector-icon" alt="" src="./public/vector.svg" />
+
+        <div class="pp-1-parent">
+          <img class="pp-1-icon" alt="" src="./public/pp_1.png" />
+
+          <img class="vector-icon2" alt="" src="./public/vectorb.png" />
+
+      <!-- svelte-ignore a11y-invalid-attribute -->
+      <!-- <a href="#" download="front.jpeg">
+		<button>Download Front (JPEG)</button>
+	  </a>
+	  <!-svelte-ignore a11y-invalid-attribute -->
+      <!-- <a href="#" download="front.pdf">
+		<button>Download Front (PDF)</button>
+	  </a> -->
+
+      <h3>Reverse Side:</h3>
+      <div class="business-card-back" id="card-back">
+        <div class="business-card-back">
+          <div class="phil-dunphy-container">
+            <b class="phil-dunphy2">{formData.name}</b>
+            <div class="real-estate-agent2">{formData.designation}</div>
+          </div>
+          <div class="vector-parent">
+            <img class="vector-icon3" alt="" src="./public/vector2.svg" />
   
-	let showPrompt = false;
+            <img class="vector-icon4" alt="" src="./public/vector3.svg" />
   
-	let currentPage = "home";
+            <div class="div">{formData.phoneNumber}</div>
+            <div class="wwwphildunphycom">{formData.website}</div>
+            <div class="philgmailcom">{formData.email}</div>
+            <div class="toit-street-usa">{formData.address}</div>
+          </div>
+          <img class="vector-icon5" alt="" src="./public/vector4.svg" />
   
-	const changePage = (page) => {
-	  currentPage = page;
-	};
+          <img class="vector-icon6" alt="" src="./public/vector5.svg" />
+        </div>
+      </div>
+    </div>
+      </div></div>
+      <!-- svelte-ignore a11y-invalid-attribute -->
+      <!-- <a href="#" download="back.jpeg">
+		<button>Download Back (JPEG)</button>
+	  </a> -->
+      <!-- svelte-ignore a11y-invalid-attribute -->
+      <!-- <a href="#" download="back.pdf">
+		<button>Download Back (PDF)</button>
+	  </a> -->
+      <button on:click={closePrompt}>Close</button>
+      <Download />
+    </div></div>
   
-	const submitForm = () => {
-	  showPrompt = true;
-	};
-  
-	const closePrompt = () => {
-	  showPrompt = false;
-	};
-  </script>
-  
-  <style>
-	.business-card-container {
-	  display: flex;
-	  justify-content: space-between;
-	}
-  
-	.input-section,
-	.preview-section {
-	  width: 40%;
-	  padding: 20px;
-	  background-color: #f0f0f0;
-	  border: 1px solid #ccc;
-	  border-radius: 5px;
-	}
-  
-	.input-section h3,
-	.preview-section h3 {
-	  font-size: 20px;
-	  margin-bottom: 10px;
-	}
-  
-	.form-group {
-	  margin-bottom: 10px;
-	}
-  
-	.form-group label {
-	  display: block;
-	  margin-bottom: 5px;
-	}
-  
-	.form-group input {
-	  width: 100%;
-	  padding: 10px;
-	  border: 1px solid #ccc;
-	  border-radius: 5px;
-	}
-  
-	.form-group input::placeholder {
-	  color: #aaa;
-	}
-  
-	.button-section {
-	  display: flex;
-	  justify-content: space-between;
-	}
-  
-	.button-section button {
-	  width: 48%;
-	  padding: 10px;
-	  background-color: #007bff;
-	  color: #fff;
-	  border: none;
-	  border-radius: 5px;
-	  cursor: pointer;
-	}
-  
-	.button-section button:hover {
-	  background-color: #0056b3;
-	}
-  
-	.preview-section .business-card-front,
-	.prompt-content .business-card-front {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  background-color: lightblue;
-	  font-family: 'Times New Roman', Times, serif;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	}
-	.preview-section .business-card-back,
-	.prompt-content .business-card-back {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  background-color: lightblue;
-	  font-family: 'Times New Roman', Times, serif;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: left;
-	  justify-content: center;
-	}
-	.preview-section .business-card-front:hover,
-	.preview-section .business-card-back:hover {
-	  background-color: lightcoral;
-	}
-  
-	.business-card-text {
-	  max-width: 80%;
-	}
-  
-	.prompt {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  background-color: rgba(0, 0, 0, 0.7);
-	}
-  
-	.prompt-content {
-	  background-color: #fff;
-	  padding: 20px;
-	  border-radius: 5px;
-	  text-align: center;
-	}
-	.prompt-content .business-card-front:hover,
-	.prompt-content .business-card-back:hover {
-	  background-color: lightcoral;
-	}
+{/if}
+<style>
+  .business-card-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .input-section,
+  .preview-section {
+    width: 40%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .input-section h3,
+  .preview-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group input::placeholder {
+    color: #aaa;
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-section button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button-section button:hover {
+    background-color: #0056b3;
+  }
+
+  .preview-section .business-card-front,
+  .prompt-content .business-card-front,
+  .preview-section .business-card-back,
+  .prompt-content .business-card-back {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #333;
+    background-color: lightblue;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .preview-section .business-card-front:hover,
+  .preview-section .business-card-back:hover,
+  .prompt-content .business-card-front:hover,
+  .prompt-content .business-card-back:hover {
+    background-color: lightcoral;
+  }
+
+  .business-card-text {
+    max-width: 80%;
+  }
+
+  .prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .prompt-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
     .ml-1-icon {
   position: absolute;
   top: 0;
@@ -346,154 +525,4 @@
   font-family: "Red Rose";
 }
 
-  </style>
-  {#if currentPage === "home"}
-  <div class="business-card-container">
-	<div class="input-section">
-	  <h3>Your Business Card:</h3>
-	  <div class="form-group">
-		<label for="name">Name:</label>
-		<input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
-	  </div>
-	  <div class="form-group">
-		<label for="designation">Designation:</label>
-		<input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
-	  </div>
-	  <div class="form-group">
-		<label for="address">Address:</label>
-		<input type="text" id="address" bind:value={formData.address} placeholder="Your Address" />
-	  </div>
-	  <div class="form-group">
-		<label for="phoneNumber">Phone Number:</label>
-		<input type="text" id="phoneNumber" bind:value={formData.phoneNumber} placeholder="Your Phone Number with Country Code" />
-	  </div>
-	  <div class="form-group">
-		<label for="website">Website:</label>
-		<input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
-	  </div>
-	  <div class="button-section">
-		<button on:click={submitForm}>Submit</button>
-	  </div>
-	</div>
-  
-	<div class="preview-section">
-	  <h3>Front Side:</h3>
-	  <div class="business-card-front">
-		<div class="property-1default-parent">
-			<div class="property-1default">
-			  <img class="ml-1-icon" alt="" src="./public/ml_1.png" />
-	  
-			  <div class="phil-dunphy-parent">
-				<b class="phil-dunphy">PHIL DUNPHY</b>
-				<div class="real-estate-agent">REAL ESTATE AGENT</div>
-			  </div>
-			  <img class="vector-icon" alt="" src="./public/Vector.png" />
-			</div>
-			<div class="property-1variant2">
-			  <div class="phil-dunphy-parent">
-				<b class="phil-dunphy">PHIL DUNPHY</b>
-				<div class="real-estate-agent">REAL ESTATE AGENT</div>
-			  </div>
-			  <img class="vector-icon" alt="" src="./public/vector.svg" />
-	  
-			  <div class="pp-1-parent">
-				<img class="pp-1-icon" alt="" src="./public/pp_1.png" />
-	  
-				<img class="vector-icon2" alt="" src="./public/vectorb.png" />
-	  
-				<div class="phil-dunphy-container">
-				  <b class="phil-dunphy2">PHIL DUNPHY</b>
-				  <div class="real-estate-agent2">REAL ESTATE AGENT</div>
-				</div>
-				<div class="vector-parent">
-				  <img class="vector-icon3" alt="" src="./public/vector2.svg" />
-	  
-				  <img class="vector-icon4" alt="" src="./public/vector3.svg" />
-	  
-				  <div class="div">+91 2390471802</div>
-				  <div class="wwwphildunphycom">www.phildunphy.com</div>
-				  <div class="philgmailcom">phil@gmail.com</div>
-				  <div class="toit-street-usa">20, Toit Street, USA</div>
-				</div>
-				<img class="vector-icon5" alt="" src="./public/vector4.svg" />
-	  
-				<img class="vector-icon6" alt="" src="./public/vector5.svg" />
-			  </div>
-			</div>
-		  </div>
-		 </div>
-	  <h3>Reverse Side:</h3>
-	  <div class="business-card-back">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.designation}</div>
-		<div class="business-card-text">{formData.address}</div>
-		<div class="business-card-text">{formData.phoneNumber}</div>
-		<div class="business-card-text">{formData.website}</div>
-	  </div>
-	  <button on:click={closePrompt}>Close</button>
-	</div>
-  </div>
-  {/if}
-  
-  {#if showPrompt}
-  <div class="prompt">
-	<div class="prompt-content">
-	  <p>Form Submitted!</p>
-	  <h3>Front Side:</h3>
-	  <div class="business-card-front">
-		<div class="property-1default-parent">
-			<div class="property-1default">
-			  <img class="ml-1-icon" alt="" src="./public/ml_1.png" />
-	  
-			  <div class="phil-dunphy-parent">
-				<b class="phil-dunphy">PHIL DUNPHY</b>
-				<div class="real-estate-agent">REAL ESTATE AGENT</div>
-			  </div>
-			  <img class="vector-icon" alt="" src="./public/Vector.png" />
-			</div>
-			<div class="property-1variant2">
-			  <div class="phil-dunphy-parent">
-				<b class="phil-dunphy">PHIL DUNPHY</b>
-				<div class="real-estate-agent">REAL ESTATE AGENT</div>
-			  </div>
-			  <img class="vector-icon" alt="" src="./public/vector.svg" />
-	  
-			  <div class="pp-1-parent">
-				<img class="pp-1-icon" alt="" src="./public/pp_1.png" />
-	  
-				<img class="vector-icon2" alt="" src="./public/vectorb.png" />
-	  
-				<div class="phil-dunphy-container">
-				  <b class="phil-dunphy2">PHIL DUNPHY</b>
-				  <div class="real-estate-agent2">REAL ESTATE AGENT</div>
-				</div>
-				<div class="vector-parent">
-				  <img class="vector-icon3" alt="" src="./public/vector2.svg" />
-	  
-				  <img class="vector-icon4" alt="" src="./public/vector3.svg" />
-	  
-				  <div class="div">+91 2390471802</div>
-				  <div class="wwwphildunphycom">www.phildunphy.com</div>
-				  <div class="philgmailcom">phil@gmail.com</div>
-				  <div class="toit-street-usa">20, Toit Street, USA</div>
-				</div>
-				<img class="vector-icon5" alt="" src="./public/vector4.svg" />
-	  
-				<img class="vector-icon6" alt="" src="./public/vector5.svg" />
-			  </div>
-			</div>
-		  </div>
-		 </div>
-	  <h3>Reverse Side:</h3>
-	  <div class="business-card-back">
-		<div class="business-card-text">{formData.name}</div>
-		<div class="business-card-text">{formData.designation}</div>
-		<div class="business-card-text">{formData.address}</div>
-		<div class="business-card-text">{formData.phoneNumber}</div>
-		<div class="business-card-text">{formData.website}</div>
-	  </div>
-	  <button on:click={closePrompt}>Close</button>
-	</div>
-  </div>
-  {/if}
-  
+</style>
