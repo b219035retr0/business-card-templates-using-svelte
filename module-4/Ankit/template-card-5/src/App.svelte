@@ -1,4 +1,6 @@
 <script>
+  import Download from "../../../Download.svelte";
+
   let formData = {
     name: "Company Name",
     tagline: "Tagline",
@@ -131,14 +133,14 @@
 
       <h3>Reverse Side:</h3>
       <div class="business-card-back display-flex">
+        <div class="frame-child" />
+        <div class="arrow-right" />
         <div class="rev-left">
           <div class="">{formData.phoneNumber}</div>
           <div class="">{formData.address}</div>
           <div class="">{formData.email}</div>
           <div class="">{formData.website}</div>
         </div>
-
-        <div class="frame-child" />
 
         <div class="rev-right">
           <div class="name-rev">{formData.owner}</div>
@@ -154,15 +156,44 @@
     <div class="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
-      <div class="business-card-front">
-        <img class="wolf-icon" alt="Logo" src="../public/wolf@2x.png" />
+      <div class="business-card-front" id="card-front">
+        <svg
+          width="44"
+          height="43"
+          viewBox="0 0 44 43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="currentColor"
+        >
+          <path
+            d="M0 0V10.53H11V0H0ZM16.5 0V10.53H27.5V0H16.5ZM33 0V10.53H44V0H33ZM0 15.795V26.325H11V15.795H0ZM16.5 15.795V26.325H27.5V15.795H16.5ZM33 15.795V26.325H44V15.795H33ZM0 31.59V42.12H11V31.59H0ZM16.5 31.59V42.12H27.5V31.59H16.5ZM33 31.59V42.12H44V31.59H33Z"
+            fill="white"
+          />
+        </svg>
+
         <div class="business-card-text name">{formData.name}</div>
+        <div class="tagline">{formData.tagline}</div>
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back left-items" />
+      <div class="business-card-back display-flex" id="card-back">
+        <div class="frame-child" />
+        <div class="arrow-right" />
+        <div class="rev-left">
+          <div class="">{formData.phoneNumber}</div>
+          <div class="">{formData.address}</div>
+          <div class="">{formData.email}</div>
+          <div class="">{formData.website}</div>
+        </div>
+
+        <div class="rev-right">
+          <div class="name-rev">{formData.owner}</div>
+          <div class="position-rev">{formData.position}</div>
+        </div>
+      </div>
 
       <button on:click={closePrompt}>Close</button>
+      <Download />
     </div>
   </div>
 {/if}
@@ -279,6 +310,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 102;
   }
 
   .prompt-content {
@@ -309,18 +341,6 @@
     margin-top: 4px;
   }
 
-  .left-items {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    /* justify-content: center; */
-    /* padding-left: 30px; */
-  }
-
-  .gap {
-    margin-top: 24px;
-  }
-
   .display-flex {
     display: flex;
     background-color: burlywood;
@@ -337,23 +357,14 @@
     --color-darkslategray: rgba(9, 45, 57, 0.89);
   }
 
-  /* front css */
-  .icon-grid-three-up {
-    width: 64px;
-    height: 64px;
-    /* max-width: 100%; */
-    overflow: hidden;
-    /* border: 1px solid blue; */
-  }
-
   .frame-child {
     /* border: 1px solid blue; */
-    position: absolute;
-    width: 170px;
+    /* position: absolute; */
+    width: 150px;
     height: 120px;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0 100%, 0 0);
+
     background: rgba(9, 45, 57, 0.89);
-    /* opacity: 0.2; */
+    /* opacity: 0.2;   */
     color: white;
     z-index: 100;
   }
@@ -363,7 +374,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 12px;
+    padding-right: 8px;
   }
 
   .rev-left {
@@ -371,13 +382,15 @@
     flex-direction: column;
     align-items: left;
     margin: 0;
-    margin-left: 8px;
+    margin-left: -210px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
     font-style: italic;
     color: #fff;
     z-index: 101;
+    width: 128px;
+    border: none;
   }
 
   .rev-left > div {
@@ -390,7 +403,6 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(9, 45, 57, 0.89);
     /* margin-top: 50%; */
-    margin: 0;
   }
 
   .position-rev {
@@ -400,8 +412,15 @@
     margin: 0;
   }
 
-  .cube {
-    height: 60px;
+  .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    margin-left: -43px;
+    /* margin-top: -1px; */
+
+    border-left: 30px solid rgba(9, 45, 57, 0.89);
   }
 
   /* ----------------------------- */
