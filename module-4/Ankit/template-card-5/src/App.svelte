@@ -1,4 +1,6 @@
 <script>
+  import Download from "../../../Download.svelte";
+
   let formData = {
     name: "Company Name",
     tagline: "Tagline",
@@ -110,7 +112,7 @@
 
     <div class="preview-section">
       <h3>Front Side:</h3>
-      <div class="business-card-front">
+      <div class="business-card-front" id="">
         <svg
           width="44"
           height="43"
@@ -151,18 +153,19 @@
 
 {#if showPrompt}
   <div class="prompt">
-    <div class="prompt-content">
+    <div class="prompt-content" id="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
-      <div class="business-card-front">
+      <div class="business-card-front" id="card-front">
         <img class="wolf-icon" alt="Logo" src="../public/wolf@2x.png" />
         <div class="business-card-text name">{formData.name}</div>
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back left-items" />
+      <div class="business-card-back left-items" id="card-back"/>
 
       <button on:click={closePrompt}>Close</button>
+      <Download />
     </div>
   </div>
 {/if}
