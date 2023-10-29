@@ -104,34 +104,45 @@
         />
       </div>
       <div class="button-section">
-        <button on:click={submitForm}>Submit</button>
+        <button on:click={submitForm}>Apply</button>
       </div>
     </div>
 
     <div class="preview-section">
       <h3>Front Side:</h3>
       <div class="business-card-front">
-        <img
-          class="icon-grid-three-up"
-          alt="None"
-          src="./icon-grid-three-up.png"
-        />
+        <svg
+          width="44"
+          height="43"
+          viewBox="0 0 44 43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="currentColor"
+        >
+          <path
+            d="M0 0V10.53H11V0H0ZM16.5 0V10.53H27.5V0H16.5ZM33 0V10.53H44V0H33ZM0 15.795V26.325H11V15.795H0ZM16.5 15.795V26.325H27.5V15.795H16.5ZM33 15.795V26.325H44V15.795H33ZM0 31.59V42.12H11V31.59H0ZM16.5 31.59V42.12H27.5V31.59H16.5ZM33 31.59V42.12H44V31.59H33Z"
+            fill="white"
+          />
+        </svg>
 
-        <b class="company-name">{formData.name}</b>
+        <div class="business-card-text name">{formData.name}</div>
         <div class="tagline">{formData.tagline}</div>
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back">
-        <div class="">
-          <div class="your-name">{formData.owner}</div>
-          <div class="position">{formData.position}</div>
-          <img class="frame-child" alt="" src="./rectangle-1.png" />
+      <div class="business-card-back display-flex">
+        <div class="rev-left">
+          <div class="">{formData.phoneNumber}</div>
+          <div class="">{formData.address}</div>
+          <div class="">{formData.email}</div>
+          <div class="">{formData.website}</div>
+        </div>
 
-          <div class="contact">{formData.phoneNumber}</div>
-          <div class="website-url">{formData.website}</div>
-          <div class="email">{formData.email}</div>
-          <div class="address">{formData.address}</div>
+        <div class="frame-child" />
+
+        <div class="rev-right">
+          <div class="name-rev">{formData.owner}</div>
+          <div class="position-rev">{formData.position}</div>
         </div>
       </div>
     </div>
@@ -149,31 +160,7 @@
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back left-items">
-        <div class="padding-left">
-          <div class="business-card-text tagline">{formData.tagline}</div>
-          <!-- <div class="business-card-text">{formData.name}</div> -->
-
-          <div class="gap" />
-          <div class="business-card-text">{formData.phoneNumber}</div>
-          <div class="business-card-text">{formData.website}</div>
-          <div class="business-card-text">{formData.email}</div>
-          <div class="business-card-text">{formData.address}</div>
-        </div>
-        <!-- <img class="website-icon" alt="Website" src="../public/website@2x.png" /> -->
-
-        <!-- <img class="phone-icon" alt="Call" src="../public/phone@2x.png" /> -->
-
-        <!-- <img class="address-icon" alt="Address" src="../public/address@2x.png" /> -->
-
-        <img
-          class="circled-envelope-icon"
-          alt=""
-          src="../public/circled-envelope@2x.png"
-        />
-
-        <img class="wolf-icon1" alt="" src="../public/wolf@2x.png" />
-      </div>
+      <div class="business-card-back left-items" />
 
       <button on:click={closePrompt}>Close</button>
     </div>
@@ -266,16 +253,16 @@
     background-color: lightblue;
     /* font-family: "Times New Roman", Times, serif; */
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
 
     background-color: rgba(231, 240, 244, 0.89);
     overflow: hidden;
     text-align: left;
     font-size: var(--font-size-3xs);
     font-family: var(--font-inter);
-    color: white;
+    /* color: white; */
   }
   .preview-section .business-card-front:hover,
   .preview-section .business-card-back:hover {
@@ -309,8 +296,17 @@
   /* front css */
 
   .name {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 12px;
+  }
+
+  .tagline {
+    font-size: large;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4px;
   }
 
   .left-items {
@@ -321,26 +317,13 @@
     /* padding-left: 30px; */
   }
 
-  .padding-left {
-    margin-top: -2px;
-    margin-bottom: -2px;
-    margin-left: 32px;
-    margin-right: 96px;
-
-    height: 100%;
-    padding: 8px;
-    padding-top: 16px;
-    background-color: snow;
-    color: #2e224a;
-  }
-
-  .tagline {
-    font-size: large;
-    font-weight: bolder;
-  }
-
   .gap {
     margin-top: 24px;
+  }
+
+  .display-flex {
+    display: flex;
+    background-color: burlywood;
   }
 
   :root {
@@ -356,23 +339,70 @@
 
   /* front css */
   .icon-grid-three-up {
-    /* position: absolute; */
-    width: 14.67%;
-    top: 46px;
-    right: 42.67%;
-    left: 42.67%;
-    max-width: 100%;
+    width: 64px;
+    height: 64px;
+    /* max-width: 100%; */
     overflow: hidden;
-    height: 42.12px;
+    /* border: 1px solid blue; */
   }
 
+  .frame-child {
+    /* border: 1px solid blue; */
+    position: absolute;
+    width: 170px;
+    height: 120px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0 100%, 0 0);
+    background: rgba(9, 45, 57, 0.89);
+    /* opacity: 0.2; */
+    color: white;
+    z-index: 100;
+  }
 
+  .rev-right {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 12px;
+  }
 
- 
+  .rev-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    margin-left: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    z-index: 101;
+  }
 
+  .rev-left > div {
+    margin-top: 2px;
+  }
 
+  .name-rev {
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(9, 45, 57, 0.89);
+    /* margin-top: 50%; */
+    margin: 0;
+  }
 
+  .position-rev {
+    font-size: medium;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
 
+  .cube {
+    height: 60px;
+  }
 
   /* ----------------------------- */
 </style>
