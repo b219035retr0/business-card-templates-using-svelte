@@ -463,7 +463,7 @@
 		
 			  <div class="company">
 				<p class="healthcare">
-				  <b>Healthcare</b>
+				  <b>{formData.company}</b>
 				</p>
 				<p class="medical-servics">{formData.services}</p>
 			  </div>
@@ -507,7 +507,7 @@
 				<p class="manager">{formData.designation}</p>
 			  </div>
 			  <div class="div">{formData.phoneNumber}</div>
-			  <div class="div">hellow@heathcare.com</div>
+			  <div class="div">{formData.email}</div>
 			  <div class="div">{formData.website}</div>
 			  <div class="div">{formData.address}</div>
 			</div>
@@ -516,9 +516,9 @@
 		
 			  <div class="healthcare-medical-servics-container">
 				<p class="pranjal-padole">
-				  <b>Healthcare</b>
+				  <b>{formData.company}</b>
 				</p>
-				<p class="medical-servics1">Medical Servics</p>
+				<p class="medical-servics1">{formData.services}</p>
 			  </div>
 			</div>
 		  </div>
@@ -586,7 +586,7 @@
 				<p class="manager">{formData.designation}</p>
 			  </div>
 			  <div class="div">{formData.phoneNumber}</div>
-			  <div class="div">hellow@heathcare.com</div>
+			  <div class="div">{formData.email}</div>
 			  <div class="div">{formData.website}</div>
 			  <div class="div">{formData.address}</div>
 			</div>
@@ -595,7 +595,7 @@
 		
 			  <div class="healthcare-medical-servics-container">
 				<p class="pranjal-padole">
-				  <b>Healthcare</b>
+				  <b>{formData.company}</b>
 				</p>
 				<p class="medical-servics1">Medical Servics</p>
 			  </div>
