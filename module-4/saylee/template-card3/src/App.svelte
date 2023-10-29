@@ -84,10 +84,12 @@
 	}
   
 	.preview-section .business-card-front,
-	.prompt-content .business-card-front {
+	.prompt-content .business-card-front,
+	.preview-section .business-card-back,
+	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
-	  border: 2px solid #333;
+	  border: 1px solid #333;
 	  background-color: gray;
 	  font-family: 'Playfair Display';
 	  display: flex;
@@ -95,18 +97,7 @@
 	  align-items: center;
 	  justify-content: center;
 	}
-	.preview-section .business-card-back,
-	.prompt-content .business-card-back {
-	  width: 300px;
-	  height: 200px;
-	  border: 2px solid #333;
-	  background-color: gray;
-	  font-family: 'Playfair Display';
-	  display: flex;
-	  flex-direction: column;
-	  align-items: left;
-	  justify-content: center;
-	}
+	
 	.prompt {
 	  position: fixed;
 	  top: 0;
@@ -184,13 +175,12 @@
 
     .front3 {
       position: relative;
-      width: 100%;
+      width: 300px;
       height: 200px;
       overflow: hidden;
       background-image: url(./front@3x.png);
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top;
+      background-position: bottom;
       cursor: pointer;
       text-align: center;
       font-size: 25.74px;
@@ -201,8 +191,8 @@
 
     @media screen and (max-width: 1200px) {
       .front3 {
-        width: 1050px;
-        height: 600px;
+        width: 300px;
+        height: 200px;
       }
     }
 
