@@ -1,4 +1,6 @@
 <script>
+  import Download from "../../../Download.svelte";
+
   let formData = {
     name: "Medical Center",
     domain: "Health Safety",
@@ -95,7 +97,7 @@
         />
       </div>
       <div class="button-section">
-        <button on:click={submitForm}>Submit</button>
+        <button on:click={submitForm}>Apply</button>
       </div>
     </div>
 
@@ -172,10 +174,10 @@
 
 {#if showPrompt}
   <div class="prompt">
-    <div class="prompt-content">
+    <div class="prompt-content" id="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
-      <div class="business-card-front">
+      <div class="business-card-front" id="card-front">
         <img class="dr-icon" alt="Doctor" src="./dr@2x.png" />
         <div class="center-items">
           <div class="business-card-text name">{formData.name}</div>
@@ -185,7 +187,7 @@
       </div>
 
       <h3>Reverse Side:</h3>
-      <div class="business-card-back center-items">
+      <div class="business-card-back center-items" id="card-back">
         <div class="flex">
           <div class="center-items">
             <div class="business-card-text namerev">{formData.name}</div>
@@ -242,6 +244,8 @@
       </div>
 
       <button on:click={closePrompt}>Close</button>
+      <!--  -->
+      <Download />
     </div>
   </div>
 {/if}
@@ -338,10 +342,6 @@
     background-color: lightcoral;
   }
 
-  .business-card-text {
-    /* max-width: 80%; */
-  }
-
   .prompt {
     position: fixed;
     top: 0;
@@ -393,16 +393,6 @@
     height: 20px;
     object-fit: cover;
     /* border: 1px solid blue; */
-  }
-
-  .all0 {
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-
-  .center {
-    align-items: center;
   }
 
   .service1,
