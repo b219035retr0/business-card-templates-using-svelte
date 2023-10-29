@@ -108,46 +108,45 @@
 
       <h3>Reverse Side:</h3>
       <div class="business-card-back flex-row">
-          <div class="business-card-text owner">{formData.owner}</div>
-          <!-- <div class="business-card-text">{formData.name}</div> -->
-          <i class="business-card-text">{formData.profession}</i>
-          <div class="gap" />
-          <table>
-            <tr class="align">
-              <td>
-                <img class="icon" alt="Call" src="./phone@2x.png" />
-              </td>
-              <td>
-                <div class="business-card-text">{formData.phoneNumber}</div>
-              </td>
-            </tr>
-            <tr class="align">
-              <td>
-                <img class="icon" alt="Website" src="./website@2x.png" />
-              </td>
-              <td>
-                <div class="business-card-text">{formData.website}</div>
-              </td>
-            </tr>
-            <tr class="align">
-              <td>
-                <img class="icon" alt="" src="./circled-envelope@2x.png" />
-              </td>
-              <td>
-                <div class="business-card-text">{formData.email}</div>
-              </td>
-            </tr>
-            <tr class="align">
-              <td>
-                <img class="icon" alt="Address" src="./address@2x.png" />
-              </td>
-              <td>
-                <div class="business-card-text">{formData.address}</div>
-              </td>
-            </tr>
-          </table>      
-          <img class="wolf-icon-rev" alt="" src="./wolf@2x.png" />
-     
+        <div class="business-card-text owner">{formData.owner}</div>
+        <!-- <div class="business-card-text">{formData.name}</div> -->
+        <i class="business-card-text">{formData.profession}</i>
+        <div class="gap" />
+        <table>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Call" src="./phone@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.phoneNumber}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Website" src="./website@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.website}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="" src="./circled-envelope@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.email}</div>
+            </td>
+          </tr>
+          <tr class="align">
+            <td>
+              <img class="icon" alt="Address" src="./address@2x.png" />
+            </td>
+            <td>
+              <div class="business-card-text">{formData.address}</div>
+            </td>
+          </tr>
+        </table>
+        <img class="wolf-icon-rev" alt="" src="./wolf@2x.png" />
 
         <!-- <div class="rectangle" /> -->
       </div>
@@ -160,10 +159,8 @@
     <div class="prompt-content">
       <p>Form Submitted!</p>
       <h3>Front Side:</h3>
-      
 
       <h3>Reverse Side:</h3>
-      
 
       <button on:click={closePrompt}>Close</button>
       <Download />
@@ -320,8 +317,6 @@
     margin: 0;
   }
 
-
-
   /* ----------------------------- */
 
   .wolf-icon {
@@ -331,6 +326,4 @@
     height: 56px;
     width: 56px;
   }
-
-
 </style>
