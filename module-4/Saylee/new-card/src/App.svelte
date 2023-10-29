@@ -193,6 +193,7 @@
             <div class="frame2">
               <div class="frame3">
                 <img class="icon1" alt="" src="./public/4-1@2x.png" />
+                <img class="icon1" alt="" src="./4-1@2x.png" />
     
                 <b class="vegan-catering1">
                   <p class="vegan1">Vegan</p>
@@ -205,14 +206,14 @@
                 </div>
               </div>
             </div>
-            <img class="frame-icon1" alt="" src="./public/frame1.svg" />
+            <img class="frame-icon1" alt="" src="./frame1.svg" />
           </div>
           <div class="frame5">
             <div class="frame6">
               <img
                 class="green-vegan-food-catering-busi"
                 alt=""
-                src="./public/green-vegan-food-catering-business-card-2@2x.png"
+                src="./green-vegan-food-catering-business-card-2@2x.png"
               />
     
               <div class="frame7">
