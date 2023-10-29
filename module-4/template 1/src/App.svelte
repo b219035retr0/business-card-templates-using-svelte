@@ -1,4 +1,8 @@
-<script>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer">
 	let formData = {
 	  name: "Name",
 	  designation: "Prof",
@@ -21,6 +25,34 @@
 	const closePrompt = () => {
 	  showPrompt = false;
 	};
+	const downloadFrontPDF = () => {
+  const frontCard = document.querySelector('.business-card-front');
+  const frontCardConfig = { margin: 10 };
+  html2pdf().from(frontCard).set(frontCardConfig).outputPdf().then(pdf => {
+    const blob = new Blob([pdf], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'front.pdf';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+};
+
+const downloadBackPDF = () => {
+  const backCard = document.querySelector('.business-card-back');
+  const backCardConfig = { margin: 10 };
+  html2pdf().from(backCard).set(backCardConfig).outputPdf().then(pdf => {
+    const blob = new Blob([pdf], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'back.pdf';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+};
+
   </script>
   
   <style>
@@ -185,15 +217,7 @@
 		<div class="business-card-text">{formData.name}</div>
 		<div class="business-card-text">{formData.website}</div>
 	  </div>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="front.jpeg">
-		<button>Download Front (JPEG)</button>
-	  </a>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="front.pdf">
-		<button>Download Front (PDF)</button>
-	  </a>
-  
+	  <button on:click={downloadFrontPDF}>Download Front (PDF)</button>
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
 		<div class="business-card-text">{formData.name}</div>
@@ -202,14 +226,7 @@
 		<div class="business-card-text">{formData.phoneNumber}</div>
 		<div class="business-card-text">{formData.website}</div>
 	  </div>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="back.jpeg">
-		<button>Download Back (JPEG)</button>
-	  </a>
-	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" download="back.pdf">
-		<button>Download Back (PDF)</button>
-	  </a>
+	  <button on:click={downloadBackPDF}>Download Back (PDF)</button>
 	  <button on:click={closePrompt}>Close</button>
 	</div>
   </div>
